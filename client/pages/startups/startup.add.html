@@ -46,7 +46,13 @@
               <input class='form-control' type="text" placeholder="آدرس تصویر">
             </div>
             <div class='col col-md-4'>
-              <label>یا اپلود کنید</label>
+                <label>یا</label>
+                {{#with logoUpload}}
+                    Uploading <b>{{file.name}}</b>:
+                    <span id="progress">{{progress.get}}%</span>
+                {{else}}
+                    <input type="file" id="fileInput">
+                {{/with}}
             </div>
           </div>
         </div>
@@ -58,7 +64,13 @@
               <input class='form-control' type="text" placeholder="آدرس تصویر">
             </div>
             <div class='col col-md-4'>
-              <label>یا اپلود کنید</label>
+                <label>یا</label>
+                {{#with coverUpload}}
+                    Uploading <b>{{file.name}}</b>:
+                    <span id="progress">{{progress.get}}%</span>
+                {{else}}
+                    <input type="file" id="fileInput">
+                {{/with}}
             </div>
           </div>
         </div>
