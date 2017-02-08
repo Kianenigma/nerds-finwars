@@ -1,10 +1,12 @@
 import { FilesCollection } from 'meteor/ostrio:files';
 
-Template.pics.onCreated(function () {
-  let startupData = {owner:Meteor.userId()};
+Template['startup.add'].onCreated(function () {
   this.logoUpload = new ReactiveVar(false);
   this.coverUpload = new ReactiveVar(false);
 });
+
+let startupData = {owner:Meteor.userId()};
+
 Template['startup.add'].onRendered(function () {
   $('#example-vertical').steps({
     headerTag: 'h3',
@@ -20,7 +22,7 @@ Template['startup.add'].onRendered(function () {
         startupData = Object.assign(startupData, {detail: $('#detail').val()});
         startupData = Object.assign(startupData, {category: $('#category').val()});
       } else if (currentIndex === 1) {
-        
+        startupData = Object.assign(startupData, {teaser: $('#teaser').val()});
       } else if (currentIndex === 2) {
         
       } else if (currentIndex === 3) {
@@ -51,6 +53,7 @@ Template['startup.add'].helpers({
 
 Template['startup.add'].events({
   'change #logoInput': function (e, template) {
+    e.preventDefault();
     if (e.currentTarget.files && e.currentTarget.files[0]) {
       var upload = Images.insert({
         file: e.currentTarget.files[0],
@@ -66,6 +69,7 @@ Template['startup.add'].events({
         if (error) {
           alert('Error during upload: ' + error);
         } else {
+          startupData = Object.assign(startupData, {logoPath: fileObj.path});
           alert('File "' + fileObj.name + '" successfully uploaded');
         }
         template.logoUpload.set(false);
@@ -75,6 +79,8 @@ Template['startup.add'].events({
     }
   },
   'change #coverInput': function (e, template) {
+    e.preventDefault();
+    console.log('cover');
     if (e.currentTarget.files && e.currentTarget.files[0]) {
       var upload = Images.insert({
         file: e.currentTarget.files[0],
@@ -90,6 +96,7 @@ Template['startup.add'].events({
         if (error) {
           alert('Error during upload: ' + error);
         } else {
+          startupData = Object.assign(startupData, {coverPath: fileObj.path});
           alert('File "' + fileObj.name + '" successfully uploaded');
         }
         template.coverUpload.set(false);
