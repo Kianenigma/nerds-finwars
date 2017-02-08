@@ -10,7 +10,7 @@ Template.home.onRendered(function () {
   setTimeout(function () {
     console.log(($('#carousel').height() + 10) + 'px')
 
-    $('#content-start').css('margin-top', ($('#carousel').height() + 10) + 'px')
+    $('#content-start').css('margin-top', ($('#carousel').height() + 20) + 'px')
   }, 200)
 })
 
