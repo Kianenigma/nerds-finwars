@@ -1,5 +1,6 @@
-Template['user.profile'].onRendered(function () { console.log("message");
- })
+Template['user.profile'].onRendered(function () {
+  console.log('message')
+})
 Template['user.profile'].helpers({
   create: function () {
 
