@@ -1,5 +1,27 @@
 <template name="mainLayout">
-    <h1> Salam Kian!</h1>
+  <div class="container">
+    <div class="masthead">
+      <h3 class="text-muted">
+        استارتاپ بوستر
+      </h3>
+      <a>ورود / ثبت نام</a>
+      <nav>
+        <ul class="nav nav-justified">
+          <li class="active"><a href="/">خانه</a></li>
+          <li><a href="/startup/list">استارتآپ ها</a></li>
+          <li><a href="#">سوالات متداول</a></li>
+          <li><a href="#">درباره ما</a></li>
+          <li><a href="#">تماس</a></li>
+        </ul>
+      </nav>
+    </div>
 
     {{> yield }}
+  </div>
+
+  <!-- Site footer -->
+  <footer class="footer">
+    <p>&copy; 2016 Company, Inc.</p>
+  </footer>
+
 </template>
