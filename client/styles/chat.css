@@ -1,0 +1,26 @@
+.conversationBox {
+  background: #CCC;
+  border: 2px dashed black ;
+}
+
+.conversationBrick {
+  border-bottom: 2px dashed black ;
+  padding: 2px;
+}
+.conversationBrick.selected {
+  background: red;
+}
+.conversationBrick img {
+  width: 20%;
+}
+
+.messageBox {
+  height: 400px;
+  overflow: scroll;
+  background: black;
+}
+
+.messageBrick {
+  background: green;
+  margin: 5px;
+}
