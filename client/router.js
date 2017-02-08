@@ -22,6 +22,9 @@ Router.route('/startup/:id', function () {
 Router.route('/user/auth', function () {
   this.render('user.auth')
 })
+Router.route('/user/login', function() {
+  this.render('user.login')
+})
 Router.route('/user/:id', function () {
   this.render('user.profile', {data: {id: this.params.id}})
 })
