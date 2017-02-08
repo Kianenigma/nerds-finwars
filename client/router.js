@@ -28,3 +28,10 @@ Router.route('/user/login', function() {
 Router.route('/user/:id', function () {
   this.render('user.profile', {data: {id: this.params.id}})
 })
+
+//
+// TODO this is a test route for writing functionalities and must delete SOON!
+//
+Router.route('/invest', function () {
+  this.render('invest');
+})

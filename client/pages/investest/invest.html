@@ -1,0 +1,9 @@
+<template name="invest">
+  {{#each startups}}
+    {{name}}
+    <form>
+      <input class="form-control" type="number" name="investValue" value="" placeholder="مقدار سرمایه گذاری">
+      <button class="form-control" type="submit" name="button"> ثبت</button>
+    </form>
+  {{/each}}
+</template>
