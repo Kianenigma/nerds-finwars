@@ -35,3 +35,7 @@ Router.route('/user/:id', function () {
 Router.route('/invest', function () {
   this.render('invest');
 })
+
+Router.route('/chat', function () {
+  this.render('chat');
+})
