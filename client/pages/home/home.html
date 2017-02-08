@@ -1,6 +1,6 @@
 <template name="home" id="home">
   <div id='homeWrapper'>
-    <div id="carousel" class="carousel slide" data-ride="carousel">
+    <div id="carousel" class="carousel slide shadow" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -58,8 +58,20 @@
     </div>
   </div>
 
-  <div id="grid">
+  <div id="startupPicBoxGrid">
+    {{> startupPicBox}}
+    {{> startupPicBox}}
+    {{> startupPicBox}}
+    {{> startupPicBox}}
+    {{> startupPicBox}}
+    {{> startupPicBox}}
 
+    {{> startupPicBox}}
+    {{> startupPicBox}}
+    {{> startupPicBox}}
+    {{> startupPicBox}}
+    {{> startupPicBox}}
+    {{> startupPicBox}}
   </div>
 </template>
 
@@ -93,6 +105,13 @@
 
 <template name="startupPicBox">
   <div class="col col-md-2 startupPicBox">
-    <img src="/img/04.png">
+    <img src="/img/04.jpg">
+    <div class="content">
+      <div class="align">
+        توضیحات
+        توضیحات
+        توضیحات 
+      </div>
+    </div>
   </div>
 </template>

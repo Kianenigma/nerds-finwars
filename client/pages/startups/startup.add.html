@@ -1,3 +1,215 @@
 <template name="startup.add">
-  Add a new startup
+  <div id="startupAddWrapper">
+    <div id="example-vertical">
+      <h3>اطلاعات اولیه </h3>
+      <section>
+        <div class="form-group">
+          <label>نام پروژه</label>
+          <input type="text" class="form-control" placeholder="نام پروژه">
+        </div>
+        <div class="form-group">
+          <div class='row'>
+            <div class="col col-md-6">
+              <label>شهر</label>
+              <input class="form-control" type="text" placeholder="شهر">
+            </div>
+            <div class="col col-md-6">
+              <label>استان</label>
+              <input class="form-control" type="text" placeholder="استان">
+            </div>
+          </div>
+        </div>
+
+        <div class='form-group'>
+          <label> توضیحات </label>
+          <textarea class='form-control' rows="3"></textarea>
+        </div>
+
+        <div class='form-group'>
+          <label> دسته بندی </label>
+          <select class="form-control">
+            <option value="">1</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+          </select>
+        </div>
+      </section>
+
+
+      <h3>اطلاعات نمایشی </h3>
+      <section>
+        <div class='form-group'>
+          <label> لوگو </label>
+          <div class='row'>
+            <div class='col col-md-8 '>
+              <input class='form-control' type="text" placeholder="آدرس تصویر">
+            </div>
+            <div class='col col-md-4'>
+              <label>یا اپلود کنید</label>
+            </div>
+          </div>
+        </div>
+
+        <div class='form-group'>
+          <label> کاور </label>
+          <div class='row'>
+            <div class='col col-md-8 '>
+              <input class='form-control' type="text" placeholder="آدرس تصویر">
+            </div>
+            <div class='col col-md-4'>
+              <label>یا اپلود کنید</label>
+            </div>
+          </div>
+        </div>
+
+        <div class='form-group'>
+          <label> تیزر </label>
+          <input class='form-control' type="text" placeholder="لینک ویدیو">
+        </div>
+
+      </section>
+      <h3> اطلاعات تماس</h3>
+      <section>
+        <div class="form-group">
+          <div class='row'>
+            <div class="col col-md-6">
+              <label> ایمیل پروژّ </label>
+              <input class="form-control" type="text" placeholder="example@domain.com">
+            </div>
+            <div class="col col-md-6">
+              <label>وبسایت</label>
+              <input class="form-control" type="text" placeholder="domain.com">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class='row'>
+            <div class="col col-md-6">
+              <label>تلفن تماس  </label>
+              <input class="form-control" type="text" placeholder="۲۲۲۲۲۲۲">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class='row'>
+            <div class="col col-md-6">
+              <label> آیدی اینستاگرام </label>
+              <input class="form-control" type="text" placeholder="@example">
+            </div>
+            <div class="col col-md-6">
+              <label> لینکدین  </label>
+              <input class="form-control" type="text" placeholder="domain.com">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <h3> اطلاعات تکمیلی </h3>
+      <section>
+        <h5>اعضا </h5>
+        <div class='form-group'>
+          <div class='row'>
+            <div class='col col-md-8'>
+              <label> کاربر  </label>
+              <input class="form-control" type="text" placeholder="ایدی">
+            </div>
+
+            <div class='col col-md-4'>
+              <label> سمت </label>
+              <select class="form-control">
+                <option value="">1</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button type="button" class='btn btn-info btn-xs '> افزودن </button>
+
+
+        <h5> سوالات متداول </h5>
+        <div class='form-group'>
+          <label> سوال  </label>
+          <input type="text" class='form-control' placeholder="نحوه درآمد چیست؟ ">
+        </div>
+        <div class="form-group">
+          <label> پاسخ </label>
+          <textarea class='form-control' rows="3"></textarea>
+        </div>
+        <button type="button" class='btn btn-info btn-xs '> افزودن </button>
+
+
+      </section>
+
+      <h3>مالی و سرمایه گذاری </h3>
+      <section>
+        <div class='form-group'>
+          <label>مرحله پروژه</label>
+          <select class="form-control">
+            <option value="">1</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+          </select>
+        </div>
+
+
+        <div class='form-group'>
+          <label>فاند مورد نیاز</label>
+          <input class="form-control" type="text" placeholder="۲۰۰۰۰۰۰۰">
+        </div>
+
+
+        <div class='form-group'>
+          <label>تاریخ پایان</label>
+          <input class="form-control" type="text" id="projectDatePicker">
+        </div>
+
+
+        <h4>پیشنهاد به شتاب دهنده ها</h4>
+
+        <div class='row'>
+          <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+              <div class="caption text-center">
+                <h3>شتاب دهنده </h3>
+                <p>
+                  توضیح
+                  توضیح
+                  توضیح
+                  توضیح
+                  توضیح
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+              <div class="caption text-center">
+                <h3>شتاب دهنده </h3>
+                <p>
+                  توضیح
+                  توضیح
+                  توضیح
+                  توضیح
+                  توضیح
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+    </div>
+  </div>
 </template>

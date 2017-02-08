@@ -1,0 +1,9 @@
+
+#startupAddWrapper {
+  margin-top: 70px;
+}
+
+
+#startupAddWrapper > div > div.col.col-md-2 {
+  border-right: 1px solid #e2e2e2
+}

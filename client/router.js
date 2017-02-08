@@ -22,20 +22,29 @@ Router.route('/startup/:id', function () {
 Router.route('/user/auth', function () {
   this.render('user.auth')
 })
-Router.route('/user/login', function() {
+Router.route('/user/login', function () {
   this.render('user.login')
 })
 Router.route('/user/:id', function () {
   this.render('user.profile', {data: {id: this.params.id}})
 })
 
+var fixHeader = function () {
+  if (Router.current() !== '/') {
+    $('#mainNav').removeClass('transp')
+  }
+  this.next()
+}
+
+Router.onBeforeAction(fixHeader)
+
 //
 // TODO this is a test route for writing functionalities and must delete SOON!
 //
 Router.route('/invest', function () {
-  this.render('invest');
+  this.render('invest')
 })
 
 Router.route('/chat', function () {
-  this.render('chat');
+  this.render('chat')
 })
