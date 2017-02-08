@@ -15,3 +15,11 @@ Meteor.publish('allStartups', function () {
 Meteor.publish('allInvestments', function () {
   return Investments.find({});
 })
+
+Meteor.publish('allConversations', function () {
+  return Conversations.find({});
+})
+
+Meteor.publish('allMessages', function () {
+  return Messages.find({});
+})
