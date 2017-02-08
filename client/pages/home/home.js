@@ -31,4 +31,3 @@ Template.home.events({
 
   }
 })
-console.log(Template)
