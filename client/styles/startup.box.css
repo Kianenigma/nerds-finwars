@@ -1,0 +1,35 @@
+.startupBox .jumbotron-contents {
+  position: absolute;
+  bottom: -75px;
+  background: inherit;
+  transition: all .3s ease;
+}
+
+.startupBox .jumbotron-photo {
+  /*margin-bottom: 45px;*/
+}
+
+.startupBox .jumbotron {
+  position: relative;
+  overflow: hidden;
+}
+
+.startupBox:hover .jumbotron-contents {
+  bottom: 0;
+  cursor: pointer;
+  height: 100%;
+  opacity: .9;
+}
+
+.startupIconBox i {
+  background-color: white ;
+  border-radius: 12.5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 27px;
+}
+.startupIconBox {
+  position: absolute;
+  bottom: 70px ;
+}

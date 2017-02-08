@@ -1,31 +1,98 @@
-<template name="home">
-    <!-- Jumbotron -->
-    <div class="jumbotron">
+<template name="home" id="home">
+  <div id='homeWrapper'>
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="/img/04.jpg">
+          <div class="carousel-caption">
+            توضیح؟
+          </div>
+        </div>
+      </div>
+
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">قبلی</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">بعدی</span>
+      </a>
+    </div>
+
+
+    <div class="jumbotron" id="content-start">
       <h1>پروژه خفن خود را به ما بسپارید</h1>
       <p class="lead">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-    </p>
+      </p>
       <p>
         <a class="btn btn-lg btn-success" href="/startup/add" role="button">پروژه خود را ثبت کنید</a>
       </p>
     </div>
 
-    <!-- Example row of columns -->
+    <h2 class="bb">
+      داغ‌ترین پروژه‌ها
+    </h2>
+
     <div class="row">
-      <div class="col-lg-4">
-        <h2>Safari bug warning!</h2>
-        <p class="text-danger">As of v9.1.2, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-      </div>
-      <div class="col-lg-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-     </div>
-      <div class="col-lg-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+      {{> startupBox}}
+      {{> startupBox}}
+      {{> startupBox}}
+    </div>
+
+    <h2 class="bb">
+      تازه پروژه‌ها
+    </h2>
+
+
+    <div class="row">
+      {{> startupBox}}
+      {{> startupBox}}
+      {{> startupBox}}
+    </div>
+  </div>
+
+  <div id="grid">
+
+  </div>
+</template>
+
+<template name="startupBox">
+  <div class="col-md-4 startupBox">
+    <div class="jumbotron">
+      {{> startupIconBox}}
+      <div class="jumbotron-photo"><img src="/img/04.jpg" /></div>
+      <div class="jumbotron-contents">
+        <p>عوان یک پروژه</p>
+        <p>
+          توضیحات بیشتر
+          توضیحات بیشتر
+          توضیحات بیشتر
+          توضیحات بیشتر
+          توضیحات بیشتر
+          توضیحات بیشتر
+        </p>
       </div>
     </div>
+  </div>
+</template>
+
+
+<template name="startupIconBox">
+  <div class="startupIconBox">
+    <i class="ion ion-android-star"></i>
+    <i class="ion ion-heart"></i>
+  </div>
+</template>
+
+<template name="startupPicBox">
+  <div class="col col-md-2 startupPicBox">
+    <img src="/img/04.png">
+  </div>
 </template>
