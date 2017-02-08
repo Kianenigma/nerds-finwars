@@ -24,13 +24,15 @@ Template['user.auth'].events({
         name: event.target.name.value,
     };
 
-    console.log(options);
-
     Accounts.createUser(options, function (err, result) {
         if (err) {
             console.log(err.reason);
         }
     });
+
+    event.target.email.value = "";
+    event.target.name.value = "";
+    event.target.password.value = "";
 
   }
 })

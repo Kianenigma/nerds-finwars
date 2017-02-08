@@ -3,15 +3,15 @@ Template['user.login'].events({
     event.preventDefault();
     var email = event.target.email.value;
     var password = event.target.password.value;
-    console.log(email);
-    console.log(password);
+
     Meteor.loginWithPassword(email, password, function(err){
       if ( err ) {
         console.log(err.reason);
       } else {
-        console.log('success');
       }
     })
 
+    event.target.email.value = "";
+    event.target.password.value = "";
   }
 })
