@@ -6,11 +6,14 @@
 }
 
 
-
+footer {
+  margin-top: 50px;
+}
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'IranSans';
+  padding-top: 40px;
   --main-color : #19B5FE;
   --info-color : #8E44AD;
   --light-color : #F5F7FA;
@@ -30,11 +33,9 @@ body, html {
     -moz-transition: all .25s ease;
     -ms-transition: all .25s ease;
     -o-transition: all .25s ease;
-    transition: all .25s ease;
-    /*height:60px ;*/
     padding-top: 2px ;
-
     font-size: 16px ;
+    margin-bottom: 50px
 }
 
 #mainNav.transp {

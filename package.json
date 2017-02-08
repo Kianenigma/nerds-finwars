@@ -9,6 +9,7 @@
     "bcrypt": "^1.0.2",
     "meteor-node-stubs": "~0.2.0",
     "moment-jalaali": "^0.5.1",
+    "noty": "^2.4.0",
     "persian-datepicker": "^0.4.5"
   }
 }

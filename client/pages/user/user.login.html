@@ -1,14 +1,20 @@
 <template name="user.login">
-  <div class="row">
-    <div class="col-md-12">
-      <form>
-        <div class="form-group">
-          <input type="email" class="form-control" name="email" placeholder="پست الکترونیک">
-        </div>
-        <div class="form-group">
-          <input type="password" class="form-control" name="password" placeholder="رمز عبور">
-        </div>
-        <button type="submit" class="btn btn-default"> ورود</button>
-      </form>
+  <div id="userLogin">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-sm-12 well">
+        <h2 class='bb'> ورود به سایت</h2>
+        <form>
+          <div class="form-group">
+            <label> پست الکترونیک</label>
+            <input required type="email" class="form-control" name="email" placeholder="پست الکترونیک">
+          </div>
+          <div class="form-group">
+            <label> رمزعبور </label>
+            <input required type="password" class="form-control" name="password" placeholder="رمز عبور">
+          </div>
+          <button type="submit" class="btn btn-block btn-success"> ورود</button>
+        </form>
+      </div>
     </div>
-  </div></template>
+  </div>
+</template>
