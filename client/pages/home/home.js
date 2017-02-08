@@ -1,5 +1,17 @@
 Template.home.onRendered(function () {
-  console.log('!!')
+  $(window).scroll(function () {
+    if ($(window).scrollTop() == 0) {
+      $('#mainNav').addClass('transp')
+    } else {
+      $('#mainNav').removeClass('transp')
+    }
+  })
+
+  setTimeout(function () {
+    console.log(($('#carousel').height() + 10) + 'px')
+
+    $('#content-start').css('margin-top', ($('#carousel').height() + 10) + 'px')
+  }, 200)
 })
 
 Template.home.helpers({

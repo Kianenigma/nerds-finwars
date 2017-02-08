@@ -1,0 +1,55 @@
+#homeWrapper {
+  /*margin-top: 65px;*/
+}
+
+/* Carousel */
+#carousel {
+  position: absolute;
+  top: 0 ;
+  left: 0;
+  width: 100%;
+}
+
+
+.bb{
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px ;
+}
+
+.bb:before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  width: 10%;
+  top : calc(100% + 20px);
+  border-bottom: 5px solid var(--main-color);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.bb:after {
+  content: '';
+  position: absolute;
+  left: 48.785%;
+  width: 2.5%;
+  top : calc(100% + 20px);
+  border-bottom: 2px solid var(--main-color);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.bb:hover:before {
+  width: 20%;
+  left:40%;
+}
+
+.bb:hover:after {
+  top : calc(100% + 30px);
+}

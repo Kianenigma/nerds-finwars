@@ -1,21 +1,35 @@
 <template name="mainLayout">
-  <div class="container">
-    <div class="masthead">
-      <h3 class="text-muted">
-        استارتاپ بوستر
-      </h3>
-      <a>ورود / ثبت نام</a>
-      <nav>
-        <ul class="nav nav-justified">
-          <li class="active"><a href="/">خانه</a></li>
-          <li><a href="/startup/list">استارتآپ ها</a></li>
-          <li><a href="#">سوالات متداول</a></li>
-          <li><a href="#">درباره ما</a></li>
-          <li><a href="#">تماس</a></li>
-        </ul>
-      </nav>
-    </div>
+  <nav id="mainNav" class="navbar navbar-fixed-top transp">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span> منو <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="/"> فاندبوستر </a>
+        </div>
 
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav" id="scroll-nav">
+            <li>
+              <a class="scroll" href="">یادگیری</a>
+            </li>
+            <li>
+              <a class="scroll" href="">پروژه‌ها</a>
+            </li>
+            <li>
+              <a class="scroll" href=""> ثبت پروژه</a>
+            </li>
+            <li>
+              <a class="scroll" href=""> عضو شوید </a>
+            </li>
+            <li>
+              <a class="scroll" href=""> ثبت نام</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
     {{> yield }}
   </div>
 
