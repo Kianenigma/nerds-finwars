@@ -24,11 +24,11 @@ Router.route('/user/auth', {
     this.render('user.auth')
   },
   onBeforeAction: function () {
-      if(!Meteor.userId()) {
-          this.next();
-      } else {
-          Router.go('profile');
-      }
+    if (!Meteor.userId()) {
+      this.next()
+    } else {
+      Router.go('profile')
+    }
   }
 })
 Router.route('/user/login', {
@@ -36,30 +36,30 @@ Router.route('/user/login', {
     this.render('user.login')
   },
   onBeforeAction: function () {
-      if(!Meteor.userId()) {
-          this.next();
-      } else {
-          Router.go('profile');
-      }
+    if (!Meteor.userId()) {
+      this.next()
+    } else {
+      Router.go('profile')
+    }
   }
 })
 Router.route('/profile', {
-  action: function() {
+  action: function () {
     this.render('user.profile', {
-      data: function(){
-        return Meteor.user();
+      data: function () {
+        return Meteor.user()
       }
-    });
+    })
   },
   name: 'profile'
 })
 Router.route('/user/:id', {
-  action: function() {
+  action: function () {
     this.render('user.profile', {
-      data: function(){
-        return Meteor.users.findOne({_id: this.params.id});
+      data: function () {
+        return Meteor.users.findOne({_id: this.params.id})
       }
-    });
+    })
   },
   name: 'profile.user'
 })
@@ -97,7 +97,7 @@ Meteor.startup(function () {
   sAlert.config({
     effect: 'scale',
     position: 'top-left',
-    timeout: 5000,
+    timeout: 50000,
     html: false,
     onRouteClose: true,
     stack: true,

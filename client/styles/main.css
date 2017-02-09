@@ -25,6 +25,10 @@ body, html {
   --dark-color : #434A54;
 }
 
+div.s-alert-box {
+  font-family: inherit;
+}
+
 .fancy-hr {
   border-color: var(--main-color)
 }
