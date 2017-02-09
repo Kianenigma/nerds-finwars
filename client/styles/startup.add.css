@@ -7,3 +7,13 @@
 #startupAddWrapper > div > div.col.col-md-2 {
   border-right: 1px solid #e2e2e2
 }
+
+
+label.upload-lbl {
+  width: 50%;
+  margin-right: 25%;
+  height: 100px;
+  text-align: center;
+  border: 1px dashed var(--main-color);
+  font-size: 18px;
+}

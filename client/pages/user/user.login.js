@@ -8,6 +8,7 @@ Template['user.login'].events({
       if (err) {
         sAlert.error('اطلاعات وارد شده نا معتبر است')
       } else {
+        sAlert.success('خوش آمدید')
       }
     })
 

@@ -3,8 +3,9 @@ Router.configure({
   notFoundTemplate: 'notFound'
 })
 
-Router.route('/', function () {
-  this.render('home')
+Router.route('/', {
+  action: function () { this.render('home') },
+  name: 'home'
 })
 
 Router.route('/startup/add', function () {
@@ -97,7 +98,7 @@ Meteor.startup(function () {
   sAlert.config({
     effect: 'scale',
     position: 'top-left',
-    timeout: 50000,
+    timeout: 5000,
     html: false,
     onRouteClose: true,
     stack: true,

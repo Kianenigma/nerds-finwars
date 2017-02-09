@@ -3,37 +3,39 @@
     <div id="example-vertical">
       <h3>اطلاعات اولیه </h3>
       <section>
-        <div class="form-group">
-          <label>نام پروژه</label>
-          <input type="text" id="name" class="form-control" placeholder="نام پروژه">
-        </div>
-        <div class="form-group">
-          <div class='row'>
-            <div class="col col-md-6">
-              <label>شهر</label>
-              <input id="city" class="form-control" type="text" placeholder="شهر">
-            </div>
-            <div class="col col-md-6">
-              <label>استان</label>
-              <input id="province" class="form-control" type="text" placeholder="استان">
+        <form id="form1">
+          <div class="form-group">
+            <label>نام پروژه</label>
+            <input required type="text" id="name" class="form-control" placeholder="نام پروژه">
+          </div>
+          <div class="form-group">
+            <div class='row'>
+              <div class="col col-md-6">
+                <label>شهر</label>
+                <input id="city" class="form-control" type="text" placeholder="شهر">
+              </div>
+              <div class="col col-md-6">
+                <label>استان</label>
+                <input id="province" class="form-control" type="text" placeholder="استان">
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class='form-group'>
-          <label> توضیحات </label>
-          <textarea id="detail" class='form-control' rows="3"></textarea>
-        </div>
+          <div class='form-group'>
+            <label> توضیحات </label>
+            <textarea id="detail" class='form-control' rows="3"></textarea>
+          </div>
 
-        <div class='form-group'>
-          <label> دسته بندی </label>
-          <select id="category" class="form-control">
-            <option value="1">1</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
+          <div class='form-group'>
+            <label> دسته بندی </label>
+            <select id="category" class="form-control">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </form>
       </section>
 
 
@@ -176,7 +178,7 @@
 
         <div class='form-group'>
           <label>فاند مورد نیاز</label>
-          <input id="goal" class="form-control" type="number" placeholder="۲۰۰۰۰۰۰۰">
+          <input class="form-control" type="text" placeholder="۲۰۰۰۰۰۰۰">
         </div>
 
 

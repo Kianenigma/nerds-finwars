@@ -31,6 +31,5 @@ Template['startup.list'].events({
             Session.set('paginateListStartup',
                 Session.get('paginateListStartup') + 10);
         }
-        console.log(Session.get('paginateListStartup'));
     }
 });

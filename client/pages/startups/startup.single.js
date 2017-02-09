@@ -1,5 +1,16 @@
 Template['startup.single'].onRendered(function () {
-  console.log('message')
+  // $('#overflowBack').css('width', $('#overflowBack').parent().width())
+  //   .css('height', $('#overflowBack').parent().height())
+  //
+
+  $('.tab-item').click(function () {
+    $('.tab-item').removeClass('active')
+    $(this).addClass('active')
+  })
+
+  $('.chart').easyPieChart({
+    barColor: '#8E44AD',
+  })
 })
 Template['startup.single'].helpers({
   create: function () {
