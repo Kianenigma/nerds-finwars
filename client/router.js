@@ -17,7 +17,11 @@ Router.route('/startup/list', function () {
 })
 
 Router.route('/startup/:id', function () {
-  this.render('startup.single', {data: {id: this.params.id}})
+  this.render('startup.single', {
+    data: function () {
+      return Startups.findOne({id: this.params.id});
+    }
+  }
 })
 
 Router.route('/user/auth', {
