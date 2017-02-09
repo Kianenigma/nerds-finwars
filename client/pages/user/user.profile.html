@@ -1,3 +1,68 @@
 <template name="user.profile">
-  User Profile Page
+  <div id="userProfile">
+    <div class="row">
+      <div class="col col-md-2" id="right">
+        <div class="row">
+          <div>
+            <img src="/img/04.jpg" id="profilePic" />
+          </div>
+        </div>
+        <p>
+          نام کاربری:
+          نام نام نام
+        </p>
+        <p>
+          تاریخ عضویت:‌ تاریخ تاریخ
+        </p>
+        <hr class="fancy-hr">
+
+        <button class="btn btn-primary vmargin btn-block"> پیام مستقیم </button>
+
+        <hr class="fancy-hr">
+
+        <div class="row profileItem">
+          <h4>
+            <a href="#general" data-toggle="tab">
+              اطلاعات کلی
+            </a>
+          </h4>
+        </div>
+
+        <div class="row profileItem">
+          <h4>
+            <a href="#investments" data-toggle="tab">
+              سرمایه‌گذاری‌ها
+            </a>
+          </h4>
+        </div>
+
+        <div class="row profileItem">
+          <h4>
+            <a href="#startups" data-toggle="tab">
+              استارت‌آد‌ها
+            </a>
+          </h4>
+        </div>
+
+
+      </div>
+      <div class="col col-md-10" id="left">
+        <div class="tabbable tabs-right clearfix">
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="general">
+              <p>
+                
+              </p>
+            </div>
+            <div class="tab-pane fade" id="investments">
+              <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.  </p>
+            </div>
+            <div class="tab-pane fade" id="startups">
+              <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

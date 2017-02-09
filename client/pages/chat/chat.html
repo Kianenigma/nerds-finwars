@@ -1,3 +1,24 @@
 <template name="chat">
-
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>پیام ها</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <h3>کاربرها</h3>
+      {{> conversationBox}}
+    </div>
+    <div class="col-md-9">
+      <h3>مکالمه ها</h3>
+      {{> messageBox }}
+    </div>
+  </div>
+  {{#if isSelected}}
+  <div class="row">
+    <div class="col-md-12">
+      <textarea class="form-control message-input"></textarea>
+    </div>
+  </div>
+  {{/if}}
 </template>

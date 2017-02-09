@@ -36,6 +36,7 @@
       </p>
     </div>
 
+    <hr>
     <h2 class="bb">
       داغ‌ترین پروژه‌ها
     </h2>
@@ -46,6 +47,7 @@
       {{> startupBox}}
     </div>
 
+    <hr>
     <h2 class="bb">
       تازه پروژه‌ها
     </h2>
@@ -57,6 +59,25 @@
       {{> startupBox}}
     </div>
   </div>
+
+
+  <hr>
+  <h2 class="bb">
+    در شهر‌ها
+  </h2>
+
+  <div class="row">
+    {{> cityBox }}
+    {{> cityBox }}
+    {{> cityBox }}
+
+  </div>
+
+
+  <hr>
+  <h2 class="bb">
+    برترین ها
+  </h2>
 
   <div id="startupPicBoxGrid">
     {{> startupPicBox}}
@@ -73,6 +94,7 @@
     {{> startupPicBox}}
     {{> startupPicBox}}
   </div>
+
 </template>
 
 <template name="startupBox">
@@ -110,8 +132,20 @@
       <div class="align">
         توضیحات
         توضیحات
-        توضیحات 
+        توضیحات
       </div>
+    </div>
+  </div>
+</template>
+
+
+<template name="cityBox">
+  <div class="col col-md-4" style="padding: 10px">
+    <div class='well'>
+      <h4>اصفهات</h4>
+      <p>
+        ....
+      </p>
     </div>
   </div>
 </template>
