@@ -19,14 +19,49 @@ Router.route('/startup/:id', function () {
   this.render('startup.single', {data: {id: this.params.id}})
 })
 
-Router.route('/user/auth', function () {
-  this.render('user.auth')
+Router.route('/user/auth', {
+  action: function () {
+    this.render('user.auth')
+  },
+  onBeforeAction: function () {
+      if(!Meteor.userId()) {
+          this.next();
+      } else {
+          Router.go('profile');
+      }
+  }
 })
-Router.route('/user/login', function () {
-  this.render('user.login')
+Router.route('/user/login', {
+  action: function () {
+    this.render('user.login')
+  },
+  onBeforeAction: function () {
+      if(!Meteor.userId()) {
+          this.next();
+      } else {
+          Router.go('profile');
+      }
+  }
 })
-Router.route('/user/:id', function () {
-  this.render('user.profile', {data: {id: this.params.id}})
+Router.route('/profile', {
+  action: function() {
+    this.render('user.profile', {
+      data: function(){
+        return Meteor.user();
+      }
+    });
+  },
+  name: 'profile'
+})
+Router.route('/user/:id', {
+  action: function() {
+    this.render('user.profile', {
+      data: function(){
+        return Meteor.users.findOne({_id: this.params.id});
+      }
+    });
+  },
+  name: 'profile.user'
 })
 
 var fixHeader = function () {
@@ -51,8 +86,11 @@ Router.route('/invest', function () {
   this.render('invest')
 })
 
-Router.route('/chat', function () {
-  this.render('chat')
+Router.route('/chat', {
+  action: function () {
+    this.render('chat')
+  },
+  name: 'chat'
 })
 
 Meteor.startup(function () {

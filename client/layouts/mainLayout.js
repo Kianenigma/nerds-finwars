@@ -20,5 +20,10 @@ Template.mainLayout.events({
   'click .logout': function (event) {
     event.preventDefault()
     Meteor.logout()
+  },
+
+  'click .profile': function (event) {
+    event.preventDefault();
+    Router.go('profile');
   }
 })

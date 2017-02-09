@@ -6,6 +6,7 @@ Template['startup.add'].onCreated(function () {
 });
 
 let startupData = {owner:Meteor.userId()};
+let members, faqs = [];
 
 Template['startup.add'].onRendered(function () {
   $('#example-vertical').steps({
@@ -44,30 +45,36 @@ Template['startup.add'].onRendered(function () {
         }
         startupData = Object.assign(startupData, {socialMedia:socialMedia});
       } else if (currentIndex === 3) {
-        
+        startupData = Object.assign(startupData, {members:members});
+        startupData = Object.assign(startupData, {faqs:faqs});
       }
-      console.log(startupData);
       return true
     },
     onFinishing: function() {
-      console.log('finishing');
+      startupData = Object.assign(startupData, {stage: $('#stage').val()});
+      startupData = Object.assign(startupData, {goal: $('#goal').val()});
+      let colsingDate = new Date();
+      startupData = Object.assign(startupData, {stage: colsingDate}); //TODO moment
+      //TODO accelerator
+      console.log(startupData);
       return true
     },
     onFinished: function() {
-     console.log('calling method')
+      Meteor.call('add.startup', startupData);
     }
   })
   
   let people = [];
-  Meteor.users.find().forEach(person => {
-    people.push({_id:person._id, name:person});
+  Meteor.users.find().fetch().forEach(person => {
+    if (person._id != Meteor.userId())
+      people.push({id:person._id, text:person.name});
   });
-  console.log(people);
   
-  $('#addMember').select2({
+  $('#memberUser').select2({
     placeholder: "نام",
     allowClear: true,
     dir: "rtl",
+    minimumInputLength: 3,
     data: people
   });
 
@@ -111,7 +118,6 @@ Template['startup.add'].events({
   },
   'change #coverInput': function (e, template) {
     e.preventDefault();
-    console.log('cover');
     if (e.currentTarget.files && e.currentTarget.files[0]) {
       var upload = Images.insert({
         file: e.currentTarget.files[0],
@@ -134,7 +140,21 @@ Template['startup.add'].events({
       });
     
       upload.start();
-      console.log('uplaod started!');
     }
+  },
+  'click #addMember': function () {
+    members.push({
+      id: $('#memberUser').val(),
+      role: $('#role').val()
+    });
+    $('#memberUser').select2("val", "");
+  },
+  'click #addFAQ': function () {
+    faqs.push({
+      question: $('#question').val(),
+      answer: $('#answer').val()
+    });
+    $('#question').val("");
+    $('#answer').val("");
   }
 })

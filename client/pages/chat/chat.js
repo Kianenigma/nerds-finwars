@@ -1,6 +1,6 @@
 Template.chat.helpers({
   'isSelected': function() {
-    return Session.get('selectedConversation')
+    return Session.get('selectedConversation') || Session.get('selectedUser');
   }
 })
 
