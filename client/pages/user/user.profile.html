@@ -14,10 +14,10 @@
         <hr class="fancy-hr">
 
         {{#unless isUser}}
-          <button class="btn btn-primary vmargin btn-block chat-to"> پیام مستقیم </button>
+        <button class="btn btn-primary vmargin btn-block chat-to"> پیام مستقیم </button>
         {{/unless}}
         {{#if isUser}}
-          <button class="btn btn-success vmargin btn-block message-list"> لیست پیام ها </button>
+        <button class="btn btn-success vmargin btn-block message-list"> لیست پیام ها </button>
         {{/if}}
 
         <hr class="fancy-hr">
@@ -60,15 +60,55 @@
         <div class="tabbable tabs-right clearfix">
           <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade active in" id="general">
-              <p>
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label> نام کامل </label>
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="ion ion-person"></i>
+                        </span>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
 
-              </p>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label> پست الکترونیک </label>
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="ion ion-ios-email-outline"></i>
+                        </span>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <button class="btn btn-success"> به‌روز‌رسانی </button>
+                    </div>
+                  </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="investments">
-              <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.  </p>
+              <div class="row">
+                {{> startupDetailBox }}
+                {{> startupDetailBox }}
+                {{> startupDetailBox }}
+                {{> startupDetailBox }}
+              </div>
             </div>
             <div class="tab-pane fade" id="startups">
-              <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone...</p>
+              <div class="row">
+                {{> startupDetailBox }}
+                {{> startupDetailBox }}
+                {{> startupDetailBox }}
+                {{> startupDetailBox }}
+              </div>
             </div>
             <div class="tab-pane fade" id="notifications">
               {{> profileTimeline }}
