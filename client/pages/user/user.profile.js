@@ -1,25 +1,15 @@
 Template['user.profile'].onRendered(function () {
-  $('#myTab1').tab()
-
-  $('.profileItem a').click(function () {
-    $('.profileItem a').parent().parent().removeClass('active')
-    $(this).parent().parent().addClass('active')
-  })
+  console.log(this);
 })
 Template['user.profile'].helpers({
-  create: function () {
-
-  },
-  rendered: function () {
-
-  },
-  destroyed: function () {
-
+  'userName': function() {
+    return this.name;
   }
 })
 
 Template['user.profile'].events({
-  'click #foo': function (event, template) {
-
+  'click .chat-to': function() {
+    Session.set('selectedUser', this._id);
+    Router.go('chat');
   }
 })
