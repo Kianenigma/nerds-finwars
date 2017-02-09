@@ -1,3 +1,17 @@
+Template.invest.onRendered(function() {
+    $(".datePicker").datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true,
+      isRTL: false,
+      dateFormat: "yy/m/d",
+      minDate: 0
+    });
+    $("#datepicker1btn").click(function(event) {
+        event.preventDefault();
+        $(".datePicker").focus();
+    });
+});
+
 Template.invest.helpers({
   'startups': function() {
     return Startups.find();
