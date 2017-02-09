@@ -13,7 +13,8 @@ Template['startup.add'].onRendered(function () {
   $('#example-vertical').steps({
     labels: {
       next: "بعدی",
-      previous: "قبلی"
+      previous: "قبلی",
+      finish: "ثبت"
     },
     headerTag: 'h3',
     bodyTag: 'section',
