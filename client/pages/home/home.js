@@ -9,10 +9,9 @@ Template.home.onRendered(function () {
     }
   })
 
-  sAlert.info('hello world')
   setTimeout(function () {
     $('#content-start').css('margin-top', ($('#carousel').height() + 20) + 'px')
-  }, 200)
+  }, 250)
 })
 
 Template.home.helpers({
