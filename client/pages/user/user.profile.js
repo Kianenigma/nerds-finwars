@@ -1,5 +1,10 @@
 Template['user.profile'].onRendered(function () {
-  console.log('message')
+  $('#myTab1').tab()
+
+  $('.profileItem a').click(function () {
+    $('.profileItem a').parent().parent().removeClass('active')
+    $(this).parent().parent().addClass('active')
+  })
 })
 Template['user.profile'].helpers({
   create: function () {
