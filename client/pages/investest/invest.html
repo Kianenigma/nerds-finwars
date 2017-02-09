@@ -1,21 +1,39 @@
 <template name="invest">
-  {{#each startups}}
-    {{name}}
-    <form>
-      <input class="form-control" type="number" name="investValue" value="" placeholder="مقدار سرمایه گذاری">
-      <button class="form-control" type="submit" name="button"> ثبت</button>
-    </form>
-  {{/each}}
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="input-append">
-      <label for="visionName" class="sr-only">سر رسید</label>
-      <div class="input-group m-b">
-          <span id="datepicker1btn" class="input-group-addon"><i class="fa fa-calendar"></i></span>
-          <input class="form-control datePicker" id="visionDate" placeholder="سر رسید" type="text" name="visionDate">
-      </div>
-  </div>
+    {{#each startups}}
+        <div style="width: 100%;height: auto">
+            <div style="float: right;width: 20%">
+                <img src="{{startup.logoPath}}" style="height: auto; width: 200px">
+                <h1>{{startup.name}}</h1>
+                <small>
+                    <b>دسته بندی: </b>{{startup.category}}
+                    <br>
+                    <b>موقعیت: </b>{{startup.location.city}},{{startup.location.province}}
+                    <br>
+                </small>
+                <p>
+                    <strong>اطلاعات تماس</strong>
+                    <br>
+                    <a href="{{startup.contact.website}}">سایت {{startup.name}}</a>
+                    <br>
+                    {{startup.contact.email}}
+                    <br>
+                    {{startup.contact.phoneNo}}
+                </p>
+            </div>
+            <div style="float: left; width: 75%">
+                <img src="{{startup.coverPath}}" style="width: 75%; max-height: 200px">
+                <h1>توضیحات:</h1>
+                <p>
+                    {{startup.detail}}
+                </p>
+                <div>
+                    <form>
+                        <input type="number" name="investValue" placeholder="مقدار سرمایه گذاری" style="width: 75%">
+                        <button type="submit" name="button" style="width: 75%"> ثبت</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+    {{/each}}
 </template>
