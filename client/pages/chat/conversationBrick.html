@@ -1,9 +1,14 @@
 <template name="conversationBrick">
   <div class="row conversationBrick {{#if isSelected}}selected{{/if}}">
     <div class="col-md-12">
-      <img src="/img/pro-pic.png">
-      <h3>{{contactName}}</h3>
-      <p>{{lastMessage}}</p>
+      <p>
+        <img src="/img/pro-pic.png">
+        {{contactName}}
+      </p>
+
+      <p>
+        آخرین پیام :   {{lastMessage}}
+      </p>
     </div>
   </div>
 </template>
