@@ -11,6 +11,15 @@
   border: 3px solid #e2e2e2;
 }
 
+div.profileItem a, .profileItem a:hover{
+  text-decoration: none;
+  transition: all .3s ease;
+  color: #AAB2BD
+}
+
+div.profileItem.active a {
+  color: var(--main-color)
+}
 div.profileItem {
   position: relative;
   color: black ;
