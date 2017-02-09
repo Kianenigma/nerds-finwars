@@ -36,10 +36,8 @@ var fixHeader = function () {
 
   if (Router.current().url === '/user/login' || Router.current().url === '/user/auth') {
     $('footer').css('position', 'fixed')
-  }
-  else {
+  } else {
     $('footer').css('position', 'static')
-
   }
   this.next()
 }
