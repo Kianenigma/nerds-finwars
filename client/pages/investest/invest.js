@@ -1,7 +1,3 @@
-Template.invest.onRendered(function() {
-    
-});
-
 Template.invest.helpers({
     'startups': function() {
         return Startups.find();
@@ -18,7 +14,6 @@ Template.invest.events({
         var investValue = event.target.investValue.value;
         var startupId = this._id;
         Meteor.call('invest.insert', investValue, startupId);
-        console.log('Done!');
         event.target.investValue.value = "";
     }
 });

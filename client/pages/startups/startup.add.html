@@ -42,28 +42,38 @@
       <h3>اطلاعات نمایشی </h3>
       <section>
         <div class='form-group'>
-          <h4 align='center'> تصاویر </h4>
+          <label> لوگو </label>
           <div class='row'>
-            <div class='col col-md-6'>
-              <label class="upload-lbl" for="logoInput">اپلود لوگو</label>
-              {{#with logoUpload}}
-              Uploading <b>{{file.name}}</b>:
-              <span id="logoProgress">{{progress.get}}%</span>
-              {{else}}
-              <input style='display: none' type="file" id="logoInput">
-              {{/with}}
+            <div class='col col-md-8 '>
+              <input class='form-control' type="text" placeholder="آدرس تصویر">
             </div>
-
-            <div class='col col-md-6'>
-              <label class="upload-lbl" for="coverInput">اپلود کاور </label>
-              {{#with coverUpload}}
-              Uploading <b>{{file.name}}</b>:
-              <span id="progress">{{progress.get}}%</span>
-              {{else}}
-              <input style='display: none' type="file" id="coverInput">
-              {{/with}}
+            <div class='col col-md-4'>
+                <label>یا</label>
+                {{#with logoUpload}}
+                    Uploading <b>{{file.name}}</b>:
+                    <span id="logoProgress">{{progress.get}}%</span>
+                {{else}}
+                    <input type="file" id="logoInput">
+                {{/with}}
             </div>
+          </div>
+        </div>
 
+        <div class='form-group'>
+          <label> کاور </label>
+          <div class='row'>
+            <div class='col col-md-8 '>
+              <input class='form-control' type="text" placeholder="آدرس تصویر">
+            </div>
+            <div class='col col-md-4'>
+                <label>یا</label>
+                {{#with coverUpload}}
+                    Uploading <b>{{file.name}}</b>:
+                    <span id="progress">{{progress.get}}%</span>
+                {{else}}
+                    <input type="file" id="coverInput">
+                {{/with}}
+            </div>
           </div>
         </div>
 
@@ -71,6 +81,86 @@
           <label> تیزر </label>
           <input id="teaser" class='form-control' type="text" placeholder="لینک ویدیو">
         </div>
+
+      </section>
+      <h3> اطلاعات تماس</h3>
+      <section>
+        <div class="form-group">
+          <div class='row'>
+            <div class="col col-md-6">
+              <label> ایمیل پروژّ </label>
+              <input id="email" class="form-control" type="text" placeholder="example@domain.com">
+            </div>
+            <div class="col col-md-6">
+              <label>وبسایت</label>
+              <input id="website" class="form-control" type="text" placeholder="domain.com">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class='row'>
+            <div class="col col-md-6">
+              <label>تلفن تماس  </label>
+              <input id="phoneNo" class="form-control" type="text" placeholder="۲۲۲۲۲۲۲">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class='row'>
+            <div class="col col-md-6">
+              <label> آیدی اینستاگرام </label>
+              <input id="instagram" class="form-control" type="text" placeholder="@example">
+            </div>
+            <div class="col col-md-6">
+              <label> لینکدین  </label>
+              <input id="linkedIn" class="form-control" type="text" placeholder="domain.com">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <h3> اطلاعات تکمیلی </h3>
+      <section>
+        <h5>اعضا </h5>
+        <div class='form-group'>
+          <div class='row'>
+            <div class='col col-md-8'>
+              <label> کاربر  </label>
+              <select id="memberUser">
+                  <option></option>
+              </select>
+            </div>
+
+            <div class='col col-md-4'>
+              <label> سمت </label>
+              <select id="role" class="form-control">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="addMember" class='btn btn-info btn-xs '> افزودن </button>
+
+
+        <h5> سوالات متداول </h5>
+        <div class='form-group'>
+          <label> سوال  </label>
+          <input type="text" id="question" class='form-control' placeholder="نحوه درآمد چیست؟ ">
+        </div>
+        <div class="form-group">
+          <label> پاسخ </label>
+          <textarea id="answer" class='form-control' rows="3"></textarea>
+        </div>
+        <button type="button" id="addFAQ" class='btn btn-info btn-xs '> افزودن </button>
+
+
       </section>
 
       <h3>مالی و سرمایه گذاری </h3>
@@ -134,88 +224,8 @@
       </section>
 
 
-      <h3> اطلاعات تماس</h3>
-      <section>
-        <div class="form-group">
-          <div class='row'>
-            <div class="col col-md-6">
-              <label> ایمیل پروژّ </label>
-              <input id="email" class="form-control" type="text" placeholder="example@domain.com">
-            </div>
-            <div class="col col-md-6">
-              <label>وبسایت</label>
-              <input id="website" class="form-control" type="text" placeholder="domain.com">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class='row'>
-            <div class="col col-md-6">
-              <label>تلفن تماس  </label>
-              <input id="phoneNo" class="form-control" type="text" placeholder="۲۲۲۲۲۲۲">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class='row'>
-            <div class="col col-md-6">
-              <label> آیدی اینستاگرام </label>
-              <input id="instagram" class="form-control" type="text" placeholder="@example">
-            </div>
-            <div class="col col-md-6">
-              <label> لینکدین  </label>
-              <input id="linkedIn" class="form-control" type="text" placeholder="domain.com">
-            </div>
-          </div>
-        </div>
-      </section>
 
 
-
-      <h3> اطلاعات تکمیلی </h3>
-      <section>
-        <h5>اعضا </h5>
-        <hr>
-          <div class='row'>
-            <div class='col col-md-6'>
-              <div class="form-goup">
-                <label> کاربر  </label>
-
-                <select class='form-control' id="memberUser">
-                  <option></option>
-                </select>
-              </div>
-            </div>
-
-            <div class='col col-md-6'>
-              <div class="form-group">
-                  <label> سمت </label>
-                  <select id="role" class="form-control">
-                    <option value="1">1</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-              </div>
-            </div>
-        </div>
-
-        <button type="button" id="addMember" class='btn btn-info btn-xs '> افزودن </button>
-
-
-        <h5> سوالات متداول </h5>
-        <div class='form-group'>
-          <label> سوال  </label>
-          <input type="text" id="question" class='form-control' placeholder="نحوه درآمد چیست؟ ">
-        </div>
-        <div class="form-group">
-          <label> پاسخ </label>
-          <textarea id="answer" class='form-control' rows="3"></textarea>
-        </div>
-        <button type="button" id="addFAQ" class='btn btn-info btn-xs '> افزودن </button>
-      </section>
     </div>
   </div>
 </template>
