@@ -9,6 +9,10 @@ let startupData = {owner:Meteor.userId()};
 
 Template['startup.add'].onRendered(function () {
   $('#example-vertical').steps({
+    labels: {
+      next: "بعدی",
+      previous: "قبلی"
+    },
     headerTag: 'h3',
     bodyTag: 'section',
     transitionEffect: 'slideLeft',
@@ -53,6 +57,19 @@ Template['startup.add'].onRendered(function () {
      console.log('calling method')
     }
   })
+  
+  let people = [];
+  Meteor.users.find().forEach(person => {
+    people.push({_id:person._id, name:person});
+  });
+  console.log(people);
+  
+  $('#addMember').select2({
+    placeholder: "نام",
+    allowClear: true,
+    dir: "rtl",
+    data: people
+  });
 
   $('#projectDatePicker').pDatepicker()
 })
