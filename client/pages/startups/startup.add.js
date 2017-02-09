@@ -1,4 +1,5 @@
 import { FilesCollection } from 'meteor/ostrio:files';
+import moment from 'moment-jalaali';
 
 Template['startup.add'].onCreated(function () {
   this.logoUpload = new ReactiveVar(false);
@@ -53,8 +54,8 @@ Template['startup.add'].onRendered(function () {
     onFinishing: function() {
       startupData = Object.assign(startupData, {stage: $('#stage').val()});
       startupData = Object.assign(startupData, {goal: $('#goal').val()});
-      let colsingDate = new Date();
-      startupData = Object.assign(startupData, {stage: colsingDate}); //TODO moment
+      let closingDate = moment($('#projectDatePicker').val(), 'jYYYY/jM/jD').toISOString();
+      startupData = Object.assign(startupData, {closingDate: closingDate})
       //TODO accelerator
       console.log(startupData);
       return true
@@ -78,7 +79,13 @@ Template['startup.add'].onRendered(function () {
     data: people
   });
 
-  $('#projectDatePicker').pDatepicker()
+  $('#projectDatePicker').datepicker({
+    showOtherMonths: true,
+    selectOtherMonths: true,
+    isRTL: false,
+    dateFormat: "yy/m/d",
+    minDate: 0
+  });
 })
 Template['startup.add'].helpers({
   logoUpload: function () {
