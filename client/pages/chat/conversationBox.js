@@ -1,5 +1,7 @@
 Template.conversationBox.helpers({
   'contacts': function() {
-    return Meteor.users.find();
+    return Conversations.find({
+      users: { $in: [Meteor.userId()] }
+    },{sort:{updateAt: -1}});
   }
 })
