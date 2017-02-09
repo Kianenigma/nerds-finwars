@@ -3,23 +3,23 @@ Template.profileTimeline.helpers({
     return Notifications.find({owner: Meteor.userId()});
   },
 
-  'backedNotif': function() {
-    return this.type = "backed";
+  'backedNotifH': function() {
+    return this.type == "backed";
   },
 
-  'daysLeftNotif': function() {
-    return this.type = "daysLeft";
+  'daysLeftNotifH': function() {
+    return this.type == "daysLeft";
   },
 
-  'failedNotif': function() {
-    return this.type = "failed";
+  'failedNotifH': function() {
+    return this.type == "failed";
   },
 
-  'fullyFundNotif': function() {
-    return this.type = "fullyFund";
+  'fullyFundNotifH': function() {
+    return this.type == "fullyFund";
   },
 
-  'messageNotif': function() {
-    return this.type = "message";
+  'messageNotifH': function() {
+    return this.type == "message";
   }
 })
