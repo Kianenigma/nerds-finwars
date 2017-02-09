@@ -1,26 +1,40 @@
 .conversationBox {
-  background: #CCC;
-  border: 2px dashed black ;
+  border-left: 1px solid #e2e2e2 ;
 }
 
 .conversationBrick {
-  border-bottom: 2px dashed black ;
-  padding: 2px;
+  border-bottom: 1px solid #e2e2e2 ;
+  padding: 0 4px;
+
 }
+
 .conversationBrick.selected {
-  background: red;
+  border-right: 5px solid var(--main-color)
 }
+
 .conversationBrick img {
   width: 20%;
 }
 
 .messageBox {
-  height: 400px;
+  max-height: 410px;
   overflow: scroll;
-  background: black;
+  position: relative;
+  right: 10px;
 }
 
 .messageBrick {
-  background: green;
-  margin: 5px;
+  width: 80%;
+  background-color: #e2e2e2;
+}
+
+.messageBrick.left {
+  margin-right: 20%;
+}
+
+#chatSend textarea {
+  margin-bottom: 10px;
+}
+#chatSend {
+  margin-top: 10px;
 }
