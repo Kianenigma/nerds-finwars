@@ -1,0 +1,19 @@
+<template name="profileTimeline">
+  {{#each notifications}}
+    {{#if backedNotif}}
+      {{> backedNotif}}
+    {{/if}}
+    {{#if daysLeftNotif}}
+      {{> daysLeftNotif}}
+    {{/if}}
+    {{#if failedNotif}}
+      {{> failedNotif}}
+    {{/if}}
+    {{#if fullyFundNotif}}
+      {{> fullyFundNotif}}
+    {{/if}}
+    {{#if messageNotif}}
+      {{> messageNotif}}
+    {{/if}}
+  {{/each}}
+</template>
