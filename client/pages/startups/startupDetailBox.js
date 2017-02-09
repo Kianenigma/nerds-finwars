@@ -11,6 +11,9 @@ Template.startupDetailBox.helpers({
     })
     return fundTillNow;
   },
+  'detail':function () {
+      return this.detail.slice(0,140)+'...';
+  },
 
   'percent': function() {
     var allFunds = Investments.find({startupId: this._id}).fetch();
