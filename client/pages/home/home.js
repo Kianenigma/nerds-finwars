@@ -31,4 +31,4 @@ Template.home.events({
 
   }
 })
-console.log(Template)
+//console.log(Template)
