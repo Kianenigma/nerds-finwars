@@ -18,12 +18,31 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'IranSans';
-  padding-top: 40px;
+  padding-top: 60px;
   --main-color : #19B5FE;
   --info-color : #8E44AD;
+
   --light-color : #F5F7FA;
   --dark-color : #434A54;
 }
+
+
+.main-color {
+  color: var(--main-color)
+}
+
+.info-color {
+  color: var(--info-color)
+}
+
+.dark-color {
+  color: var(--dark-color)
+}
+
+.light-color {
+  color: var(--light-color)
+}
+
 
 div.s-alert-box {
   font-family: inherit;
@@ -35,6 +54,10 @@ div.s-alert-box {
 
 .vmargin {
   margin: 5px 0 ;
+}
+
+.hmargin {
+  margin: 0 5px;
 }
 
 .jumbotron {
@@ -52,22 +75,26 @@ i.ii {
   color: black ;
   border-bottom: 2px solid #e2e2e2;
   -webkit-transition: all .25s ease;
-  -webkit-box-shadow: 0 5px 2px rgba(0, 0, 0, .1) ;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .1) ;
-  box-shadow: 0 5px 3px rgba(0, 0, 0, .1) ;
+  -webkit-box-shadow: 0 5px 2px rgba(0, 0, 0, .2) ;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2) ;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, .2) ;
   -moz-transition: all .25s ease;
   -ms-transition: all .25s ease;
   -o-transition: all .25s ease;
-  padding-top: 2px ;
+  padding-top: 10px ;
   font-size: 16px ;
   margin-bottom: 50px
 }
 
+#mainNav div.collapse {
+  position: relative;
+  padding-bottom: 10px;
+  top: 10px;
+}
 #mainNav.transp {
-  padding-top: 7px ;
-  padding-bottom: 5px;
-  color: #fff;
 
+  color: #fff;
+  border: none;
   background: transparent;
 }
 
@@ -104,14 +131,14 @@ i.ii {
   content: '';
   width: 100%;
   position: absolute;
-  top: calc(100% - 5px);
+  top: 68px;
   left: 0;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -ms-transform: scaleX(0);
   -o-transform: scaleX(0);
   transform: scaleX(0);
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid var(--main-color);
 }
 
 #mainNav li:hover:before{
@@ -142,6 +169,25 @@ i.ii {
   top: 5px;
   left: 5px;
   margin: 5px;
+}
+
+#mainNav .logo {
+  transition: all .3s ease;
+}
+
+#mainNav img.logo {
+  position:absolute; left: 50%; top: 20px;
+}
+#mainNav #logoblack {
+  opacity: 1
+}
+
+#mainNav #logowhite {
+  opacity: 0
+}
+
+#mainNav.transp #logowhite {
+  opacity: 1;
 }
 
 .shadow{

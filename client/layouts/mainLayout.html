@@ -13,9 +13,6 @@
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav" id="scroll-nav">
           <li>
-            <a class="scroll" href="/"> فاندر‌تاندر </a>
-          </li>
-          <li>
             <a class="scroll" href="">یادگیری</a>
           </li>
           <li>
@@ -24,6 +21,8 @@
           <li>
             <a class="scroll" href="/startup/add"> ثبت پروژه</a>
           </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
           {{#unless isLogged}}
           <li>
             <a class="scroll" href="/user/auth"> عضو شوید </a>
@@ -33,18 +32,32 @@
           </li>
           {{/unless}}
         </ul>
-      </div>
-      {{#if isLogged}}
-      <div id="profileLink">
-        <i class="ion ion-person"></i>
-        {{userName}} خوش آمدی
-        -
-        <a class="profile"> پروفایل </a>
-        <a class="logout"> خروج </a>
-      </div>
-      {{/if}}
-    </div>
 
+        {{#if isLogged}}
+        <ul class="nav navbar-nav navbar-right">
+          <li class="profile">
+            <a href="#">
+              {{userName}}
+              - پروفایل
+            </a>
+            <!-- <i class="ion ion-person"></i> -->
+          </li>
+          <li class="logout">
+            <a href="#">
+              خروج
+            </a>
+          </li>
+        </ul>
+          <!-- <a class="profile"> پروفایل </a> -->
+        {{/if}}
+
+      </div>
+
+      <a href="/" >
+        <img class='logo' id='logoblack' src="/img/logoblack.png" />
+        <img class='logo' id='logowhite' src="/img/logowhite.png" />
+      </a>
+    </div>
   </nav>
   <div class="container" id="contentWrapper">
     {{> yield }}
