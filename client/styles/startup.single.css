@@ -1,9 +1,27 @@
+#projectLogo img {
+  max-width: 100%;
+  height: auto;
+}
+
+#projectLogo {
+  overflow: hidden;
+}
+
+#overflowBack {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: -1
+}
+
+
+
 #startupSingleWrapper #infoBox {
 
 }
 
 #startupSingleWrapper #videoBox {
-  border-right: 1px solid #e2e2e2; 
+  border-right: 1px solid #e2e2e2;
 }
 
 #startupSingleWrapper #infoBox span.badge {

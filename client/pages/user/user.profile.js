@@ -1,7 +1,7 @@
 Template['user.profile'].onRendered(function () {
-  $('.profileItem').click(function () {
-    $('.profileItem').removeClass('active')
-    $(this).addClass('active')
+  $('.profileItem a ').click(function () {
+    $('.profileItem a').parent().parent().removeClass('active')
+    $(this).parent().parent().addClass('active')
   })
 })
 Template['user.profile'].helpers({

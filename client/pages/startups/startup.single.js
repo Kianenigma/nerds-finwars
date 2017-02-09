@@ -1,5 +1,6 @@
 Template['startup.single'].onRendered(function () {
-  console.log('message')
+  // $('#overflowBack').css('width', $('#overflowBack').parent().width())
+  //   .css('height', $('#overflowBack').parent().height())
 })
 Template['startup.single'].helpers({
   create: function () {
