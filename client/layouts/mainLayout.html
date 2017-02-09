@@ -1,4 +1,7 @@
 <template name="mainLayout">
+
+  {{> sAlert}}
+
   <nav id="mainNav" class="navbar navbar-fixed-top transp">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -19,22 +22,27 @@
             <li>
               <a class="scroll" href="/startup/add"> ثبت پروژه</a>
             </li>
+            {{#unless isLogged}}
             <li>
               <a class="scroll" href="/user/auth"> عضو شوید </a>
             </li>
             <li>
               <a class="scroll" href="/user/login"> وارد شوید </a>
             </li>
+            {{/unless}}
           </ul>
         </div>
+      {{#if isLogged}}
         <div id="profileLink">
           <i class="ion ion-person"></i>
-            فلانی خوش آمدی
+        {{userName}} خوش آمدی
             -
             <a href=""> پروفایل </a>
-            <a href=""> خروج </a>
+            <a class="logout"> خروج </a>
         </div>
+      {{/if}}
       </div>
+
     </nav>
   <div class="container" id="contentWrapper">
     {{> yield }}

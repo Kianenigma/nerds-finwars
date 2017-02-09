@@ -11,6 +11,13 @@ footer {
   text-align: center;
   color: white;
 }
+
+footer.stick {
+  position: absolute;
+  bottom: 0;
+  width: 100% ;
+  right: 0;
+}
 body, html {
   margin: 0;
   padding: 0;

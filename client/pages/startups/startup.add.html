@@ -5,33 +5,33 @@
       <section>
         <div class="form-group">
           <label>نام پروژه</label>
-          <input type="text" class="form-control" placeholder="نام پروژه">
+          <input type="text" id="name" class="form-control" placeholder="نام پروژه">
         </div>
         <div class="form-group">
           <div class='row'>
             <div class="col col-md-6">
               <label>شهر</label>
-              <input class="form-control" type="text" placeholder="شهر">
+              <input id="city" class="form-control" type="text" placeholder="شهر">
             </div>
             <div class="col col-md-6">
               <label>استان</label>
-              <input class="form-control" type="text" placeholder="استان">
+              <input id="province" class="form-control" type="text" placeholder="استان">
             </div>
           </div>
         </div>
 
         <div class='form-group'>
           <label> توضیحات </label>
-          <textarea class='form-control' rows="3"></textarea>
+          <textarea id="detail" class='form-control' rows="3"></textarea>
         </div>
 
         <div class='form-group'>
           <label> دسته بندی </label>
-          <select class="form-control">
-            <option value="">1</option>
-            <option value="">3</option>
-            <option value="">4</option>
-            <option value="">5</option>
+          <select id="category" class="form-control">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select>
         </div>
       </section>
@@ -46,7 +46,13 @@
               <input class='form-control' type="text" placeholder="آدرس تصویر">
             </div>
             <div class='col col-md-4'>
-              <label>یا اپلود کنید</label>
+                <label>یا</label>
+                {{#with logoUpload}}
+                    Uploading <b>{{file.name}}</b>:
+                    <span id="logoProgress">{{progress.get}}%</span>
+                {{else}}
+                    <input type="file" id="logoInput">
+                {{/with}}
             </div>
           </div>
         </div>
@@ -58,14 +64,20 @@
               <input class='form-control' type="text" placeholder="آدرس تصویر">
             </div>
             <div class='col col-md-4'>
-              <label>یا اپلود کنید</label>
+                <label>یا</label>
+                {{#with coverUpload}}
+                    Uploading <b>{{file.name}}</b>:
+                    <span id="progress">{{progress.get}}%</span>
+                {{else}}
+                    <input type="file" id="coverInput">
+                {{/with}}
             </div>
           </div>
         </div>
 
         <div class='form-group'>
           <label> تیزر </label>
-          <input class='form-control' type="text" placeholder="لینک ویدیو">
+          <input id="teaser" class='form-control' type="text" placeholder="لینک ویدیو">
         </div>
 
       </section>
@@ -75,11 +87,11 @@
           <div class='row'>
             <div class="col col-md-6">
               <label> ایمیل پروژّ </label>
-              <input class="form-control" type="text" placeholder="example@domain.com">
+              <input id="email" class="form-control" type="text" placeholder="example@domain.com">
             </div>
             <div class="col col-md-6">
               <label>وبسایت</label>
-              <input class="form-control" type="text" placeholder="domain.com">
+              <input id="website" class="form-control" type="text" placeholder="domain.com">
             </div>
           </div>
         </div>
@@ -88,7 +100,7 @@
           <div class='row'>
             <div class="col col-md-6">
               <label>تلفن تماس  </label>
-              <input class="form-control" type="text" placeholder="۲۲۲۲۲۲۲">
+              <input id="phoneNo" class="form-control" type="text" placeholder="۲۲۲۲۲۲۲">
             </div>
           </div>
         </div>
@@ -97,11 +109,11 @@
           <div class='row'>
             <div class="col col-md-6">
               <label> آیدی اینستاگرام </label>
-              <input class="form-control" type="text" placeholder="@example">
+              <input id="instagram" class="form-control" type="text" placeholder="@example">
             </div>
             <div class="col col-md-6">
               <label> لینکدین  </label>
-              <input class="form-control" type="text" placeholder="domain.com">
+              <input id="linkedIn" class="form-control" type="text" placeholder="domain.com">
             </div>
           </div>
         </div>
@@ -116,7 +128,9 @@
           <div class='row'>
             <div class='col col-md-8'>
               <label> کاربر  </label>
-              <input class="form-control" type="text" placeholder="ایدی">
+              <select id="addMember">
+                  <option></option>
+              </select>
             </div>
 
             <div class='col col-md-4'>
