@@ -1,8 +1,8 @@
 <template name="chat">
-  <h2 class='bb'>پیام ها</h2>
+  <!-- <h2 class='bb'>پیام ها</h2> -->
   <div class="row">
     <div class="col-md-4">
-      <h3>کاربرها</h3>
+      <h3 class="bb">کاربرها</h3>
       {{> conversationBox}}
     </div>
     <div class="col-md-8">
@@ -11,9 +11,10 @@
     </div>
   </div>
   {{#if isSelected}}
-  <div class="row">
-    <div class="col-md-12">
-      <textarea class="form-control message-input"></textarea>
+  <div class="row" id="chatSend">
+    <div class="col-md-8 col-md-offset-4">
+        <textarea required row='4' class="form-control message-input"></textarea>
+        <button id='sendBtn' class="btn btn-success btn-block">ارسال پیام</button>
     </div>
   </div>
   {{/if}}
