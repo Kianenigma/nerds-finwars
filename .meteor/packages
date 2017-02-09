@@ -20,7 +20,7 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
 accounts-password
 iron:router
-twbs:bootstrap
+twbs:bootstrap@3.3.6
 alonw:bootstrap-rtl
 elie:bootflat
 pagebakers:ionicons
