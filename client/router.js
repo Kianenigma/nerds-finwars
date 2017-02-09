@@ -16,11 +16,13 @@ Router.route('/startup/list', function () {
   this.render('startup.list')
 })
 
-Router.route('/startup/:id', function () {
-  this.render('startup.single', {
-    data: function () {
-      return Startups.findOne({id: this.params.id});
-    }
+Router.route('/startup/:id', {
+  action: function () {
+    this.render('startup.single', {
+      data: function () {
+        return Startups.findOne({_id: this.params.id})
+      }
+    })
   }
 })
 
