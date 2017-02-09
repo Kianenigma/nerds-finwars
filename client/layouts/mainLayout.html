@@ -3,47 +3,49 @@
   {{> sAlert}}
 
   <nav id="mainNav" class="navbar navbar-fixed-top transp">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span> منو <i class="fa fa-bars"></i>
-          </button>
-          <a class="navbar-brand" href="/"> فاندبوستر </a>
-        </div>
-
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav" id="scroll-nav">
-            <li>
-              <a class="scroll" href="">یادگیری</a>
-            </li>
-            <li>
-              <a class="scroll" href="/startup/list">پروژه‌ها</a>
-            </li>
-            <li>
-              <a class="scroll" href="/startup/add"> ثبت پروژه</a>
-            </li>
-            {{#unless isLogged}}
-            <li>
-              <a class="scroll" href="/user/auth"> عضو شوید </a>
-            </li>
-            <li>
-              <a class="scroll" href="/user/login"> وارد شوید </a>
-            </li>
-            {{/unless}}
-          </ul>
-        </div>
-      {{#if isLogged}}
-        <div id="profileLink">
-          <i class="ion ion-person"></i>
-        {{userName}} خوش آمدی
-            -
-            <a class="profile"> پروفایل </a>
-            <a class="logout"> خروج </a>
-        </div>
-      {{/if}}
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> منو <i class="fa fa-bars"></i>
+        </button>
       </div>
 
-    </nav>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" id="scroll-nav">
+          <li>
+            <a class="scroll" href="/"> فاندر‌تاندر </a>
+          </li>
+          <li>
+            <a class="scroll" href="">یادگیری</a>
+          </li>
+          <li>
+            <a class="scroll" href="/startup/list">پروژه‌ها</a>
+          </li>
+          <li>
+            <a class="scroll" href="/startup/add"> ثبت پروژه</a>
+          </li>
+          {{#unless isLogged}}
+          <li>
+            <a class="scroll" href="/user/auth"> عضو شوید </a>
+          </li>
+          <li>
+            <a class="scroll" href="/user/login"> وارد شوید </a>
+          </li>
+          {{/unless}}
+        </ul>
+      </div>
+      {{#if isLogged}}
+      <div id="profileLink">
+        <i class="ion ion-person"></i>
+        {{userName}} خوش آمدی
+        -
+        <a class="profile"> پروفایل </a>
+        <a class="logout"> خروج </a>
+      </div>
+      {{/if}}
+    </div>
+
+  </nav>
   <div class="container" id="contentWrapper">
     {{> yield }}
   </div>
