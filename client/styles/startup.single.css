@@ -14,18 +14,43 @@
   z-index: -1
 }
 
-
-
-#startupSingleWrapper #infoBox {
-
+#tabItemWrapper {
+  height: 50px;
+  background: #e6e9ed;
+}
+#tabItemWrapper .tab-item {
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  text-align: center;
+  width: 100px;
+  text-decoration: none;
+  color: black
 }
 
-#startupSingleWrapper #videoBox {
-  border-right: 1px solid #e2e2e2;
+#tabItemWrapper .tab-item:before {
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #e2e2e2;
 }
 
-#startupSingleWrapper #infoBox span.badge {
-  font-size: 16px;
-  margin: 5px;
-  padding: 5px;
+#tabItemWrapper .tab-item:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+#startupSingleWrapper .overview-panel {
+  text-align: center;
+}
+
+#startupSingleWrapper .chart > span {
+  /*position: relative;
+  top : 40%;*/
 }
