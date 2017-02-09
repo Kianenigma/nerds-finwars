@@ -9,7 +9,7 @@ Template['startup.single'].onRendered(function () {
   })
 
   $('.chart').easyPieChart({
-    barColor: '#8E44AD',
+    barColor: '#8E44AD'
   })
 })
 Template['startup.single'].helpers({
