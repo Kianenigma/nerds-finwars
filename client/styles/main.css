@@ -37,6 +37,11 @@ body, html {
   padding: 5px !important
 }
 
+i.ii {
+  font-size: 32px;
+  padding: 5px;
+}
+
 /* Nav */
 #mainNav {
   background: var(--main-color) ;
@@ -53,9 +58,9 @@ body, html {
 #mainNav.transp {
   padding-top: 10px ;
   color: #fff;
-  font-size: 14px ;
+  /*font-size: 14px ;*/
   background: transparent;
-  border-bottom: 1px solid #F5F7FA;
+  /*border-bottom: 1px solid #F5F7FA;*/
 }
 
 #mainNav a {
@@ -124,4 +129,51 @@ body, html {
   -webkit-box-shadow: 0 5px 2px rgba(0, 0, 0, .4) ;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .4) ;
   box-shadow: 0 5px 3px rgba(0, 0, 0, .4) ;
+}
+
+.rounded-btn{
+    border-radius: 25px ;
+    width: 150px;
+    margin: 1px;
+    height: 40px;
+    padding: 10px 5px  ;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+    border: none;
+}
+
+
+.rounded-btn.btn-block {
+    width: 100% ;
+}
+
+
+.rounded-btn.btn-success {
+    color:var(--light-color);
+    background-color: var(--main-color);
+}
+
+.rounded-btn.btn-success:hover, button.rounded-btn:focus{
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .2) ;
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .2) ;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2) ;
+    background-color:var(--light-color);
+    color: var(--main-color);
+}
+
+
+.rounded-btn.btn-info {
+    background-color: var(--info-color);
+    color: var(--light-color);
+}
+
+.rounded-btn.btn-info:focus, .rounded-btn.btn-info:hover {
+    background-color: var(--light-color);
+    -webkit-box-shadow: 0 5px 2px rgba(0, 0, 0, .4) ;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .4) ;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, .4) ;
+    color: var(--info-color);
 }

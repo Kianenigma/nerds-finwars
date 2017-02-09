@@ -1,0 +1,13 @@
+#startupSingleWrapper #infoBox {
+
+}
+
+#startupSingleWrapper #videoBox {
+  border-right: 1px solid #e2e2e2; 
+}
+
+#startupSingleWrapper #infoBox span.badge {
+  font-size: 16px;
+  margin: 5px;
+  padding: 5px;
+}
