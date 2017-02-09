@@ -48,15 +48,19 @@ Template['startup.add'].onRendered(function () {
         startupData = Object.assign(startupData, {members:members});
         startupData = Object.assign(startupData, {faqs:faqs});
       }
-      console.log(startupData);
       return true
     },
     onFinishing: function() {
-      console.log('finishing');
+      startupData = Object.assign(startupData, {stage: $('#stage').val()});
+      startupData = Object.assign(startupData, {goal: $('#goal').val()});
+      let colsingDate = new Date();
+      startupData = Object.assign(startupData, {stage: colsingDate}); //TODO moment
+      //TODO accelerator
+      console.log(startupData);
       return true
     },
     onFinished: function() {
-     console.log('calling method')
+      Meteor.call('add.startup', startupData);
     }
   })
   
