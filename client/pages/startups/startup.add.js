@@ -24,7 +24,21 @@ Template['startup.add'].onRendered(function () {
       } else if (currentIndex === 1) {
         startupData = Object.assign(startupData, {teaser: $('#teaser').val()});
       } else if (currentIndex === 2) {
-        
+        startupData = Object.assign(startupData, {email: $('#email').val()});
+        startupData = Object.assign(startupData, {website: $('#website').val()});
+        startupData = Object.assign(startupData, {phoneNo: $('#phoneNo').val()});
+        let socialMedia = {};
+        if ($('#instagram').val()) {
+          socialMedia = Object.assign(socialMedia, {
+            instagram: $('#instagram').val()
+          });
+        }
+        if ($('#linkedIn').val()) {
+          socialMedia = Object.assign(socialMedia, {
+            linkedIn: $('#linkedIn').val()
+          });
+        }
+        startupData = Object.assign(startupData, {socialMedia:socialMedia});
       } else if (currentIndex === 3) {
         
       }
