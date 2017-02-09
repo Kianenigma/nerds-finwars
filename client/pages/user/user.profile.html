@@ -13,7 +13,12 @@
         </p>
         <hr class="fancy-hr">
 
-        <button class="btn btn-primary vmargin btn-block chat-to"> پیام مستقیم </button>
+        {{#unless isUser}}
+          <button class="btn btn-primary vmargin btn-block chat-to"> پیام مستقیم </button>
+        {{/unless}}
+        {{#if isUser}}
+          <button class="btn btn-success vmargin btn-block message-list"> لیست پیام ها </button>
+        {{/if}}
 
         <hr class="fancy-hr">
 
@@ -36,7 +41,7 @@
         <div class="row profileItem">
           <h4>
             <a href="#startups" data-toggle="tab">
-              استارت‌آد‌ها
+              استارتاپ ها
             </a>
           </h4>
         </div>
