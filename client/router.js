@@ -23,7 +23,8 @@ Router.route('/startup/:id', {
         return Startups.findOne({_id: this.params.id})
       }
     })
-  }
+  },
+  name: 'startupSingle'
 })
 
 Router.route('/user/auth', {
