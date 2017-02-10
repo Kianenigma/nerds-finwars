@@ -15,14 +15,14 @@ Template.home.onRendered(function () {
 })
 
 Template.home.helpers({
-  create: function () {
-
+  'trends': function() {
+    return Startups.find({},{limit: 4});
   },
-  rendered: function () {
-
+  'latest': function() {
+    return Startups.find({},{limit: 4});
   },
-  destroyed: function () {
-
+  'bestStartups': function () {
+    return Startups.find({},{limit: 12});
   }
 })
 
@@ -30,4 +30,8 @@ Template.home.events({
   'click #foo': function (event, template) {
 
   }
+})
+
+Template.startupPicBox.helpers({
+
 })
