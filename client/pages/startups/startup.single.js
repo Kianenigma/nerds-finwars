@@ -41,6 +41,9 @@ Template['startup.single'].helpers({
         $('.chart').data('easyPieChart').update(percent);
         return percent;
     },
+    'startupId': function () {
+        return this._id;
+    },
     'lastInvestorId': function () {
         let investorId =  Investments.findOne()/*{startupId: this._id}, {$sort:{createdAt:1}})*/;
         console.log(this._id+'\ninvestor: '+investorId);
