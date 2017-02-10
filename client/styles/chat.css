@@ -9,7 +9,7 @@
 }
 
 .conversationBrick.selected {
-  border-right: 5px solid var(--main-color)
+  border-right: 5px solid var(--info-color)
 }
 
 .conversationBrick img {

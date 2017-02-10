@@ -1,40 +1,46 @@
 <template name="invest">
-  <!--  {{#each startups}}
-        <div style="width: 100%;height: auto">
-            <div style="float: right;width: 20%">
-                <img src="{{startup.logoPath}}" style="height: auto; width: 200px">
-                <h1>{{startup.name}}</h1>
-                <small>
-                    <b>دسته بندی: </b>{{startup.category}}
-                    <br>
-                    <b>موقعیت: </b>{{startup.location.city}},{{startup.location.province}}
-                    <br>
-                </small>
-                <p>
-                    <strong>اطلاعات تماس</strong>
-                    <br>
-                    <a href="{{startup.contact.website}}">سایت {{startup.name}}</a>
-                    <br>
-                    {{startup.contact.email}}
-                    <br>
-                    {{startup.contact.phoneNo}}
-                </p>
-            </div>
-            <div style="float: left; width: 75%">
-                <img src="{{startup.coverPath}}" style="width: 75%; max-height: 200px">
-                <h1>توضیحات:</h1>
-                <p>
-                    {{startup.detail}}
-                </p>
-                <div>
-                    <form>
-                        <input type="number" name="investValue" placeholder="مقدار سرمایه گذاری" style="width: 75%">
-                        <button type="submit" name="button" style="width: 75%"> ثبت</button>
-                    </form>
-                </div>
-            </div>
+  <h1 class="bb">تایید سرمایه‌گذاری</h1>
+
+  <div class="row">
+    <div class="col col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel panel-heading info-bg">
+
         </div>
-        <hr>
-    {{/each}} -->
-    {{name}}
+        <div class="panel-body">
+          <h3> نام استارت‌اپ : نام نام </h3>
+
+            <div class="form-group">
+              <label> مبلغ سرمایه‌گذاری</label>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-money"></i>
+                </span>
+                <input value="" type="number" class="form-control">
+              </div>
+            </div>
+
+          <hr class="fancy-hr">
+
+          <input type="checkbox" name="accepted" value="">
+          <label for="">
+            ضمن خواندن
+            <a href="">
+              قوانین و مقررات
+            </a>
+
+            آنها را قبول دارم
+          </label>
+
+          <div class="vmargin row">
+            <div class="col col-md-6 col-md-offset-3">
+              <button class="btn btn-block main-bg"> تایید و پرداخت </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{name}}
+
 </template>

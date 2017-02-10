@@ -77,11 +77,11 @@ var fixHeader = function () {
     $('#mainNav').removeClass('transp')
   }
 
-  if (Router.current().url === '/user/login' || Router.current().url === '/user/auth') {
-    $('footer').css('position', 'fixed')
-  } else {
-    $('footer').css('position', 'static')
-  }
+  // if (Router.current().url === '/user/login' || Router.current().url === '/user/auth') {
+  //   $('footer').css('position', 'fixed')
+  // } else {
+  //   $('footer').css('position', 'static')
+  // }
   this.next()
 }
 
