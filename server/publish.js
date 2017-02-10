@@ -28,3 +28,7 @@ Meteor.publish('allMessages', function () {
 Meteor.publish('allNotifications', function () {
   return Notifications.find({});
 })
+
+Meteor.publish('allShares', function () {
+  return Shares.find({});
+})
