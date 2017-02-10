@@ -1,5 +1,5 @@
 <template name="startupDetailBox">
-  <div class='col col-md-3'>
+  <div class='col col-md-3 startupGoTo'>
     <div class="jumbotron">
       <div class="jumbotron-photo"><img src="{{coverPic}}" /></div>
       <div class="jumbotron-contents">
@@ -8,15 +8,16 @@
           {{detail}}
         </p>
         <p>
+          سرمایه جذب شده:
           <span class="badge badge-default">
-            سرمایه جذب شده:
             {{allFunds}}
           </span>
-          <span class="badge badge-info">
-            مورد نیاز:
+          <br>
+          مورد نیاز:
+          <span class="badge badge-default">
             {{goal}}
-
           </span>
+
           <div class="progress progress-striped active">
             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: {{percent}}%;">{{percent}}%</div>
           </div>

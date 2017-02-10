@@ -17,7 +17,7 @@
         <button class="btn btn-primary vmargin btn-block chat-to"> پیام مستقیم </button>
         {{/unless}}
         {{#if isUser}}
-        <button class="btn btn-success vmargin btn-block message-list"> لیست پیام ها </button>
+        <button class="btn btn-success vmargin btn-block message-list info-bg"> لیست پیام ها </button>
         {{/if}}
 
         <hr class="fancy-hr">
@@ -68,7 +68,7 @@
                         <span class="input-group-addon">
                           <i class="ion ion-person"></i>
                         </span>
-                        <input type="text" class="form-control">
+                        <input disabled value='{{name}}' type="text" class="form-control">
                       </div>
                     </div>
                   </div>
@@ -80,19 +80,33 @@
                         <span class="input-group-addon">
                           <i class="ion ion-ios-email-outline"></i>
                         </span>
-                        <input type="text" class="form-control">
+                        <input disabled value="{{emails}}" type="text" class="form-control">
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="form-group">
-                    <div class="input-group">
-                      <button class="btn btn-success"> به‌روز‌رسانی </button>
+                <div class='row'>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label> تاریخ عضویت</label>
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="ion ion-calendar"></i>
+                        </span>
+                        <input disabled value="{{createdAt}}" type="text" class="form-control">
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <!-- <div class="row">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <button class="btn btn-success info-bg"> به‌روز‌رسانی </button>
+                    </div>
+                  </div>
+                </div> -->
             </div>
             <div class="tab-pane fade" id="investments">
               <div class="row">

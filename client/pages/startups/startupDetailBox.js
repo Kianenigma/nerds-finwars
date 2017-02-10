@@ -22,5 +22,13 @@ Template.startupDetailBox.helpers({
       fundTillNow = fundTillNow + parseInt(invest.investValue);
     })
     return fundTillNow/parseInt(this.goal)*100;
+  },
+
+})
+
+Template.startupDetailBox.events({
+  'click .startupGoTo': function(event) {
+    event.preventDefault();
+    Router.go('startupSingle', {id: this._id});
   }
 })
