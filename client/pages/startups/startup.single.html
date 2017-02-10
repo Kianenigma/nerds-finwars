@@ -208,7 +208,11 @@
         </div>
       </div>
       <div role="tabpanel" class="tab-pane" id="members">
-
+        {{#each members}}
+          <h3>{{member.name}}</h3>
+          {{member.role}}
+          <hr>
+        {{/each}}
       </div>
       <div role="tabpanel" class="tab-pane" id="faq">
 

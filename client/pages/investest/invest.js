@@ -1,7 +1,5 @@
 Template.invest.helpers({
-    'name': function() {
-      console.log(this);
-    }
+
 
 });
 
