@@ -44,9 +44,9 @@
     </h2>
 
     <div class="row">
-      {{> startupBox}}
-      {{> startupBox}}
-      {{> startupBox}}
+      {{#each trends}}
+        {{>startupDetailBox}}
+      {{/each}}
     </div>
 
     <hr>
@@ -56,25 +56,11 @@
 
 
     <div class="row">
-      {{> startupBox}}
-      {{> startupBox}}
-      {{> startupBox}}
+      {{#each trends}}
+        {{>startupDetailBox}}
+      {{/each}}
     </div>
   </div>
-
-
-  <hr>
-  <h2 class="bb">
-    در شهر‌ها
-  </h2>
-
-  <div class="row">
-    {{> cityBox }}
-    {{> cityBox }}
-    {{> cityBox }}
-
-  </div>
-
 
   <hr>
   <h2 class="bb">
@@ -82,19 +68,9 @@
   </h2>
 
   <div id="startupPicBoxGrid">
-    {{> startupPicBox}}
-    {{> startupPicBox}}
-    {{> startupPicBox}}
-    {{> startupPicBox}}
-    {{> startupPicBox}}
-    {{> startupPicBox}}
-
-    {{> startupPicBox}}
-    {{> startupPicBox}}
-    {{> startupPicBox}}
-    {{> startupPicBox}}
-    {{> startupPicBox}}
-    {{> startupPicBox}}
+    {{#each bestStartups}}
+      {{> startupPicBox}}
+    {{/each}}
   </div>
 
 </template>
@@ -129,12 +105,10 @@
 
 <template name="startupPicBox">
   <div class="col col-md-2 startupPicBox">
-    <img src="/img/04.jpg">
+    <img src="{{coverPath}}">
     <div class="content">
       <div class="align">
-        توضیحات
-        توضیحات
-        توضیحات
+        {{name}}
       </div>
     </div>
   </div>
