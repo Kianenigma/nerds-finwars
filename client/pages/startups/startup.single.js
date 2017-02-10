@@ -42,19 +42,29 @@ Template['startup.single'].helpers({
         return percent;
     },
     'lastInvestorId': function () {
-        investorId =  Investments.findOne({starrtupId: this._id}, {$sort:{createdAt:1}});
-        console.log('investor: '+investorId);
+        let investorId =  Investments.findOne()/*{startupId: this._id}, {$sort:{createdAt:1}})*/;
+        console.log(this._id+'\ninvestor: '+investorId);
         return investorId;
     },
     'lastInvestorName': function () {
-        return 2;
-        //Meteor.users.findOne({_id:investorId}).name;
+        return null;//Meteor.users.findOne({_id:investorId}).name;
     },
     'dayUntil': function() {
         let dayUntil = moment(this.closingDate).diff(moment(new Date()), 'days');
         let pcent = Math.floor((dayUntil / moment(this.closingDate).diff(moment(this.createdAt), 'days')) * 100);
         $('#chart1').data('easyPieChart').update(pcent);
         return dayUntil;
+    },
+    'members': function () {
+        console.log(this);
+        return this.members;
+    },
+    'member': function () {
+        let name = Meteor.users.findOne({_id: this.id}).name;
+        return {
+            name: name,
+            role: this.role
+        }
     }
     
 });
