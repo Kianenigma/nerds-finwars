@@ -11,7 +11,7 @@ Template.home.onRendered(function () {
 
   setTimeout(function () {
     $('#content-start').css('margin-top', ($('#carousel').height() + 20) + 'px')
-  }, 250)
+  }, 25)
 })
 
 Template.home.helpers({
@@ -29,6 +29,10 @@ Template.home.helpers({
 Template.home.events({
   'click #foo': function (event, template) {
 
+  },
+  'click .startupPicBox': function() {
+    console.log('fuck');
+    Router.go('startupSingle', {id: this._id});
   }
 })
 
