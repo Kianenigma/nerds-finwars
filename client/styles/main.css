@@ -26,7 +26,7 @@ body, html {
   --dark-color : #434A54;
 }
 
-/*
+
 .btn.btn-info {
   background-color: var(--main-color);
   border-color: var(--main-color);
@@ -35,10 +35,19 @@ body, html {
 .badge.badge-info {
   background-color: var(--main-color);
   border-color: var(--main-color);
-}*/
+}
 
 .main-color {
   color: var(--main-color)
+}
+
+.main-bg {
+  background-color: var(--main-color)
+  border-color: var(--main-color)
+}
+
+.info-bg {
+  background-color: var(--main-color) !important;
 }
 
 .info-color {
