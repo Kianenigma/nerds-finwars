@@ -19,6 +19,9 @@ Template['user.profile'].helpers({
   },
   'createdAt': function () {
     return moment(this.createAt).format('jYYYY/jM/jD');
+  },
+  'shares': function () {
+    return Shares.find({owner: Meteor.userId()})
   }
 })
 
