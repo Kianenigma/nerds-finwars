@@ -1,3 +1,7 @@
+import moment from 'moment-jalaali';
+
+let clctd, investors ;
+
 Template['startup.single'].onRendered(function () {
   // $('#overflowBack').css('width', $('#overflowBack').parent().width())
   //   .css('height', $('#overflowBack').parent().height())
@@ -11,9 +15,8 @@ Template['startup.single'].onRendered(function () {
   $('.chart').easyPieChart({
     barColor: '#8E44AD',
   });
+    
 });
-
-let clctd;
 
 Template['startup.single'].helpers({
     'startup': function () {
@@ -35,16 +38,23 @@ Template['startup.single'].helpers({
     'percent': function () {
         let g = parseInt(this.goal);
         let percent = Math.floor((clctd / g) * 100);
+        $('.chart').data('easyPieChart').update(percent);
         return percent;
     },
-    'lastInvestor': function () {
-        let investorId =  Investments.findOne({starrtupId: this._id}, {$sort:{createdAt:1}});
-        let name = Meteor.users.findOne({_id:investorId}).name;
+    'lastInvestorId': function () {
+        investorId =  Investments.findOne({starrtupId: this._id}, {$sort:{createdAt:1}});
         console.log('investor: '+investorId);
-        return {
-            id: investorId,
-            name: name
-        }
+        return investorId;
+    },
+    'lastInvestorName': function () {
+        return 2;
+        //Meteor.users.findOne({_id:investorId}).name;
+    },
+    'dayUntil': function() {
+        let dayUntil = moment(this.closingDate).diff(moment(new Date()), 'days');
+        let pcent = Math.floor((dayUntil / moment(this.closingDate).diff(moment(this.createdAt), 'days')) * 100);
+        $('#chart1').data('easyPieChart').update(pcent);
+        return dayUntil;
     }
     
 });
