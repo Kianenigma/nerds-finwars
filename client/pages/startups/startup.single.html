@@ -55,13 +55,17 @@
       <hr>
       <p>
         <div class="progress progress-striped active">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{collected}}" aria-valuemin="0" aria-valuemax="{{startup.goal}}" style="width: {{percent}}%;">{{percent}}%</div>
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{collected}}" aria-valuemin="0" aria-valuemax="{{startup.goal}}" style="width: {{percent}}%;">
+              {{percent}}%
+          </div>
         </div>
       </p>
 
       <p>
         <div class="progress progress-striped active">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{collected}}" aria-valuemin="0" aria-valuemax="{{startup.goal}}" style="width: {{percent}}%;">{{collected}} تومان </div>
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{collected}}" aria-valuemin="0" aria-valuemax="{{startup.goal}}" style="width: {{percent}}%;">
+              {{collected}} تومان
+          </div>
         </div>
       </p>
 
@@ -153,7 +157,7 @@
 
           <div class="col col-md-2 overview-panel">
 
-            <div class="row panel panel-default">
+            <div class="row panel panel-default" style="width: 99%;">
               <div class="panel-heading">
                 آخرین سرمایه گذار
               </div>
@@ -162,8 +166,8 @@
                   <img style="width: 80%;  height:auto" src="/img/pro-pic.png" alt="" />
                 </div>
                 <p style="text-align:center">
-                  <a href="/user/{{lastInvestor.id}}">
-                    {{lastInvestor.name}}
+                  <a href="/user/{{lastInvestorId}}">
+                    {{lastInvestorName}}
                   </a>
                 </p>
               </div>
@@ -173,12 +177,12 @@
 
             <div class="well">
               <span>{{percent}}%</span>
-              <div class="chart" data-percent="73"></div>
+              <div class="chart" data-percent=""></div>
             </div>
 
           </div>
           <div class="col col-md-2 overview-panel">
-            <div class="row panel panel-default">
+            <div class="row panel panel-default" style="width: 99%;">
               <div class="panel-heading">
                 برترین سرمایه‌گذار
               </div>
@@ -196,8 +200,8 @@
             <hr>
 
             <div class="well">
-              <span>۲۰روز</span>
-              <div class="chart" data-percent="20"></div>
+              <span>{{dayUntil}}روز</span>
+              <div class="chart" id="chart1" data-percent=""></div>
             </div>
 
           </div>
