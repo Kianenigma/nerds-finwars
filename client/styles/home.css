@@ -23,7 +23,7 @@
   left: 45%;
   width: 10%;
   top : calc(100% + 20px);
-  border-bottom: 5px solid var(--main-color);
+  border-bottom: 5px solid var(--info-color);
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -ms-transition: all .3s ease;
@@ -37,7 +37,7 @@
   left: 48.785%;
   width: 2.5%;
   top : calc(100% + 20px);
-  border-bottom: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--info-color);
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -ms-transition: all .3s ease;

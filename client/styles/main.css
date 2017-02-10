@@ -19,9 +19,8 @@ body, html {
   padding: 0;
   font-family: 'IranSans';
   padding-top: 60px;
-  --main-color : #FFA400;
-  /*--main-color : #19B5FE;*/
-  --info-color : #8E44AD;
+  --main-color : #8E44AD;
+  --info-color : #FFA400;
   --light-color : #F5F7FA;
   --dark-color : #434A54;
 }
@@ -29,18 +28,18 @@ body, html {
 
 /* info */
 .btn.btn-info {
-  background-color: var(--main-color);
-  border-color: var(--main-color);
+  background-color: var(--info-color);
+  border-color: var(--info-color);
 }
 
 .badge.badge-info {
-  background-color: var(--main-color);
-  border-color: var(--main-color);
+  background-color: var(--info-color);
+  border-color: var(--info-color);
 }
 
 .info-bg {
-  background-color: var(--main-color) !important;
-  border-color: var(--main-color) !important;
+  background-color: var(--info-color) !important;
+  border-color: var(--info-color) !important;
 }
 
 .info-color {
@@ -49,17 +48,28 @@ body, html {
 
 
 /*‌main  */
+.btn.btn-main {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.badge.badge-main {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.main-bg {
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+
 .main-color {
   color: var(--main-color)
 }
 
-.main-bg {
-  background-color: var(--main-color)
-  border-color: var(--main-color)
-}
 
 
-
+/* other */
 .dark-color {
   color: var(--dark-color)
 }
@@ -74,7 +84,7 @@ div.s-alert-box {
 }
 
 .fancy-hr {
-  border-color: var(--main-color)
+  border-color: var(--info-color)
 }
 
 .vmargin {
@@ -163,7 +173,7 @@ i.ii {
   -ms-transform: scaleX(0);
   -o-transform: scaleX(0);
   transform: scaleX(0);
-  border-bottom: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--info-color);
 }
 
 #mainNav li:hover:before{
@@ -272,7 +282,7 @@ i.ii {
 /* Step */
 
 .wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
-  background-color: var(--main-color)
+  background-color: var(--info-color)
 }
 
 .wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
@@ -280,5 +290,5 @@ i.ii {
 }
 
 #example-vertical > div.actions.clearfix > ul > li a {
-  background-color: var(--main-color)
+  background-color: var(--info-color)
 }
