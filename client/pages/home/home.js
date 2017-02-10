@@ -31,11 +31,6 @@ Template.home.events({
 
   },
   'click .startupPicBox': function() {
-    console.log('fuck');
     Router.go('startupSingle', {id: this._id});
   }
-})
-
-Template.startupPicBox.helpers({
-
 })
