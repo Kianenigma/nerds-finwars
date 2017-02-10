@@ -4,12 +4,22 @@ Template['user.profile'].onRendered(function () {
     $(this).parent().parent().addClass('active')
   })
 })
+
 Template['user.profile'].helpers({
   'userName': function () {
     return this.name
   },
   'isUser': function () {
     return Meteor.userId() == this._id
+  },
+  'emails': function () {
+    return 'todo'
+  },
+  'name': function () {
+    return 'todo'
+  },
+  'createdAt': function() {
+    return 'todo'
   }
 })
 

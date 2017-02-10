@@ -27,6 +27,7 @@ body, html {
 }
 
 
+/* info */
 .btn.btn-info {
   background-color: var(--main-color);
   border-color: var(--main-color);
@@ -37,6 +38,17 @@ body, html {
   border-color: var(--main-color);
 }
 
+.info-bg {
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+
+.info-color {
+  color: var(--info-color)
+}
+
+
+/*‌main  */
 .main-color {
   color: var(--main-color)
 }
@@ -46,13 +58,7 @@ body, html {
   border-color: var(--main-color)
 }
 
-.info-bg {
-  background-color: var(--main-color) !important;
-}
 
-.info-color {
-  color: var(--info-color)
-}
 
 .dark-color {
   color: var(--dark-color)
