@@ -1,6 +1,10 @@
+
 Template.chat.helpers({
   'isSelected': function () {
     return Session.get('selectedConversation') || Session.get('selectedUser')
+  },
+  'target': function () {
+    return Meteor.users.findOne({_id: Session.get('selectedUser')}).name
   }
 })
 
