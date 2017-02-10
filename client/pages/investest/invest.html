@@ -8,7 +8,11 @@
 
         </div>
         <div class="panel-body">
-          <h3> نام استارت‌اپ : نام نام </h3>
+          <h3>  نام استارتاپ:
+            {{name}}
+          </h3>
+
+          <form >
 
             <div class="form-group">
               <label> مبلغ سرمایه‌گذاری</label>
@@ -16,7 +20,7 @@
                 <span class="input-group-addon">
                   <i class="fa fa-money"></i>
                 </span>
-                <input value="" type="number" class="form-control">
+                <input value="" name="investValue" class="form-control form">
               </div>
             </div>
 
@@ -37,10 +41,10 @@
               <button class="btn btn-block main-bg"> تایید و پرداخت </button>
             </div>
           </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  {{name}}
 
 </template>
