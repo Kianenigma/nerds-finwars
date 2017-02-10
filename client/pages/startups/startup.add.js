@@ -7,7 +7,8 @@ Template['startup.add'].onCreated(function () {
 })
 
 let startupData = {owner: Meteor.userId()}
-let members, faqs = []
+let members =[];
+let faqs = [];
 
 Template['startup.add'].onRendered(function () {
   $('#example-vertical').steps({
@@ -55,15 +56,14 @@ Template['startup.add'].onRendered(function () {
     },
     onFinishing: function () {
       startupData = Object.assign(startupData, {stage: $('#stage').val()})
-      startupData = Object.assign(startupData, {goal: $('#goal').val()})
+      startupData = Object.assign(startupData, {goal: parseInt($('#goal').val())})
+      startupData = Object.assign(startupData, {accelerator: $('.accelerator').val()})
       let closingDate = moment($('#projectDatePicker').val(), 'jYYYY/jM/jD').toISOString()
       startupData = Object.assign(startupData, {closingDate: closingDate})
-      // TODO accelerator
-      console.log(startupData)
       return true
     },
     onFinished: function () {
-      var ret = Meteor.call('add.startup', startupData)
+      var ret = Meteor.call('add.startup', startupData);
       sAlert.success('استارت‌آپ شما با موفقیت ثبت شد!')
     }
   })
@@ -160,7 +160,7 @@ Template['startup.add'].events({
     members.push({
       id: $('#memberUser').val(),
       role: $('#role').val()
-    })
+    });
     $('#memberUser').select2('val', '')
     sAlert.success('کاربر به پروژه اضافه شد.')
   },
