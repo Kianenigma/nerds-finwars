@@ -3,7 +3,8 @@ Meteor.publish('allUsers', function () {
     fields: {
       '_id': 1,
       'emails': 1,
-      'name': 1
+      'name': 1,
+      'createAt': 1
     }
   });
 });
