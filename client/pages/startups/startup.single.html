@@ -162,8 +162,8 @@
                   <img style="width: 80%;  height:auto" src="/img/pro-pic.png" alt="" />
                 </div>
                 <p style="text-align:center">
-                  <a href="#">
-                    نام کاربر
+                  <a href="/user/{{lastInvestor.id}}">
+                    {{lastInvestor.name}}
                   </a>
                 </p>
               </div>
@@ -172,7 +172,7 @@
             <hr>
 
             <div class="well">
-              <span>73%</span>
+              <span>{{percent}}%</span>
               <div class="chart" data-percent="73"></div>
             </div>
 
