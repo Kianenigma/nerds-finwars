@@ -63,7 +63,8 @@ Template['startup.add'].onRendered(function () {
       return true
     },
     onFinished: function () {
-      Meteor.call('add.startup', startupData)
+      var ret = Meteor.call('add.startup', startupData)
+      sAlert.success('استارت‌آپ شما با موفقیت ثبت شد!')
     }
   })
 
@@ -115,10 +116,10 @@ Template['startup.add'].events({
 
       upload.on('end', function (error, fileObj) {
         if (error) {
-          alert('Error during upload: ' + error)
+          sAlert.error('خطای آپلود ' + error)
         } else {
           startupData = Object.assign(startupData, {logoPath: fileObj.path})
-          alert('File "' + fileObj.name + '" successfully uploaded')
+          sAlert.success('با موفقیت آپلود شد!')
         }
         template.logoUpload.set(false)
       })
@@ -141,10 +142,10 @@ Template['startup.add'].events({
 
       upload.on('end', function (error, fileObj) {
         if (error) {
-          alert('Error during upload: ' + error)
+          sAlert.error('خطای آپلود ' + error)
         } else {
           startupData = Object.assign(startupData, {coverPath: fileObj.path})
-          alert('File "' + fileObj.name + '" successfully uploaded')
+          sAlert.success('با موفقیت آپلود شد!')
         }
         template.coverUpload.set(false)
       })
@@ -158,12 +159,14 @@ Template['startup.add'].events({
       role: $('#role').val()
     })
     $('#memberUser').select2('val', '')
+    sAlert.success('کاربر به پروژه اضافه شد.')
   },
   'click #addFAQ': function () {
     faqs.push({
       question: $('#question').val(),
       answer: $('#answer').val()
     })
+    sAlert.success('سوال اضافه شد')
     $('#question').val('')
     $('#answer').val('')
   }
