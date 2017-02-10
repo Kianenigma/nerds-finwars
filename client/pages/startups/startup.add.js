@@ -68,6 +68,9 @@ Template['startup.add'].onRendered(function () {
     }
   })
 
+  $('div.steps.clearfix').addClass('well')
+  $('div.content.clearfix').addClass('well')
+
   let people = []
   Meteor.users.find().fetch().forEach(person => {
     if (person._id != Meteor.userId()) {

@@ -15,6 +15,8 @@ footer {
   font-size: 28px;
 }
 
+a:focus {outline:none;}
+
 footer i {
   font-size: 38px;
   margin: 0 3px;
@@ -343,9 +345,16 @@ i.ii {
 }
 
 .wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
-  background-color: #e2e2e2
+  background-color: #656D78
 }
 
 #example-vertical > div.actions.clearfix > ul > li a {
   background-color: var(--info-color)
+}
+
+div.steps.clearfix {
+  -webkit-transition: all .25s ease;
+  -webkit-box-shadow: 0 5px 2px rgba(0, 0, 0, .2) ;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2) ;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, .2) ;
 }
