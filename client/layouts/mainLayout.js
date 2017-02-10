@@ -5,6 +5,7 @@ Template.mainLayout.onCreated(function () {
   this.subscribe('allConversations');
   this.subscribe('allMessages');
   this.subscribe('allNotifications');
+  this.subscribe('allShares');
 })
 
 Template.mainLayout.helpers({

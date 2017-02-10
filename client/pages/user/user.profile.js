@@ -1,3 +1,5 @@
+import moment from 'moment-jalaali'
+
 Template['user.profile'].onRendered(function () {
   $('.profileItem a ').click(function () {
     $('.profileItem a').parent().parent().removeClass('active')
@@ -13,13 +15,10 @@ Template['user.profile'].helpers({
     return Meteor.userId() == this._id
   },
   'emails': function () {
-    return 'todo'
-  },
-  'name': function () {
-    return 'todo'
+    return this.emails[0].address;
   },
   'createdAt': function () {
-    return 'todo'
+    return moment(this.createAt).format('jYYYY/jM/jD');
   }
 })
 
