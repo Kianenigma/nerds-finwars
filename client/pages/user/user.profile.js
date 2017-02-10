@@ -18,7 +18,7 @@ Template['user.profile'].helpers({
   'name': function () {
     return 'todo'
   },
-  'createdAt': function() {
+  'createdAt': function () {
     return 'todo'
   }
 })
