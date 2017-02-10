@@ -1,3 +1,3 @@
-![Alt text](/public/img/logowhite__.png?raw=true "a Nerds on JS Production")
+![Alt text](https://raw.githubusercontent.com/Kianenigma/nerds-finwars/master/public/img/logoblack___.png)
 
 # nerds-finwars
