@@ -13,15 +13,11 @@ Template['startup.single'].onRendered(function () {
   });
 });
 
-let clctd = 0;
-Investments.find({startupId:this._id}).forEach(x => {
-    clctd += Number(x.investValue);
-});
+let clctd;
 
 Template['startup.single'].helpers({
     'startup': function () {
-    console.log(this);
-    return this;
+        return this;
     },
     'owner': function () {
     return Meteor.users.findOne({_id:this.owner}).name;
@@ -30,17 +26,24 @@ Template['startup.single'].helpers({
         return moment(this.closingDate).format('jYY/jM/jD');
     },
     'collected': function () {
+        clctd = 0;
+        Investments.find({startupId:this._id}).forEach(x => {
+            clctd += Number(x.investValue);
+        });
         return clctd ;
     },
     'percent': function () {
         let g = parseInt(this.goal);
-        return Math.floor((clctd / g) * 100);
+        let percent = Math.floor((clctd / g) * 100);
+        return percent;
     },
     'lastInvestor': function () {
-        let investorId =  Investments.findOne({starrtupId: this._id}, {$sort:{createdAt:-1}});
-        
+        let investorId =  Investments.findOne({starrtupId: this._id}, {$sort:{createdAt:1}});
+        let name = Meteor.users.findOne({_id:investorId}).name;
+        console.log('investor: '+investorId);
         return {
-            
+            id: investorId,
+            name: name
         }
     }
     
