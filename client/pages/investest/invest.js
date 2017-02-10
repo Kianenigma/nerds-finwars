@@ -1,9 +1,6 @@
 Template.invest.helpers({
-    'startups': function() {
-        return Startups.find();
-    },
-    'startup': function () {
-        return this;
+    'name': function() {
+      console.log(this);
     }
 
 });

@@ -90,13 +90,20 @@ Router.onBeforeAction(fixHeader)
 //
 // TODO this is a test route for writing functionalities and must delete SOON!
 //
-Router.route('/invest', function () {
-  this.render('invest')
+Router.route('/invest/:id', {
+  action: function() {
+    this.render('invest', {
+      data: function () {
+        return Startups.findOne({_id: this.params.id});
+      }
+    })
+  },
+  name: 'invest'
 })
 
 Router.route('/chat', {
   action: function () {
-    this.render('chat')
+    this.render('chat', )
   },
   name: 'chat'
 })
