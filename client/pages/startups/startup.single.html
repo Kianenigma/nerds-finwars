@@ -6,13 +6,13 @@
 
       </div>
       <div class="col col-md-3" id="projectLogo">
-        <img src="/img/04.jpg" alt="" />
+        <img src="{{startup.logoPath}}" alt="" />
       </div>
 
       <div class="col col-md-9">
-        <h3>عنوان پروژه : شسشسیشسیشس</h3>
+        <h3>عنوان پروژه : {{startup.name}}</h3>
         <p>
-          مالک : مالک پروژه
+          مالک : {{owner}}
         </p>
       </div>
     </div>
@@ -30,38 +30,38 @@
       <p>
         <span class="">
           <i class="ion ion-location"></i>
-          اسم شهر
+            {{startup.location.city}}, {{startup.location.province}}
         </span>
         |
         <span>
           <i class="ion ion-gear-a"></i>
-          اسم صنعت
+            {{startup.category}}
         </span>
       </p>
       <p>
         <span>
           <i class="ion ion-calendar"></i>
-          مهلت پایانی : تاریخ تاریخ
+          مهلت پایانی : {{closingDate}}
         </span>
       </p>
 
       <p>
         <span>
           <i class="ion ion-cash"></i>
-          ۲۰۰۰ از ۵۰۰۰ تومان
+          {{collected}} از {{startup.goal}} تومان
         </span>
       </p>
 
       <hr>
       <p>
         <div class="progress progress-striped active">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">40%</div>
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{collected}}" aria-valuemin="0" aria-valuemax="{{startup.goal}}" style="width: {{percent}}%;">{{percent}}%</div>
         </div>
       </p>
 
       <p>
         <div class="progress progress-striped active">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="2000" aria-valuemin="0" aria-valuemax="5000" style="width: 40%;">2000 تومان </div>
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{collected}}" aria-valuemin="0" aria-valuemax="{{startup.goal}}" style="width: {{percent}}%;">{{collected}} تومان </div>
         </div>
       </p>
 
@@ -101,7 +101,7 @@
           <div class="col col-md-10">
             <h3>نام پروژه</h3>
             <p>
-              توضیحات : ..........
+                {{startup.detail}}
             </p>
 
             <hr class="fancy-hr">
@@ -110,23 +110,23 @@
               <li>
                 بودجه هدف:‌
                 <span class="badge badge-default">
-                  ۵۰۰۰
+                  {{startup.goal}}
                   تومان
                 </span>
                 -
                 کسب شده:‌
                 <span class="badge badge-default">
-                  ۲۰۰۰
+                  {{collected}}
                   تومان
                 </span>
               </li>
               <li>
                 دسته بندی :
-                تکنولوژی
+                {{startup.category}}
               </li>
               <li>
                 موقعیت جفرافیایی :
-                تهران
+                  {{startup.location.city}}, {{startup.location.province}}
               </li>
             </ul>
 
@@ -135,11 +135,11 @@
             <ul>
               <li>
                 تاریخ نهایی:
-                ۲۵/۳/۱۳۷۴
+                  {{closingDate}}
               </li>
               <li>
                 مرحله کنونی :
-                آماده سازی اولیه
+                {{startup.stage}}
               </li>
             </ul>
 
