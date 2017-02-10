@@ -3,6 +3,10 @@
   height: 100%;
   width: 100%;
 }
+
+.startupPicBox div.col {
+  padding: 0;
+}
 .startupPicBox {
   overflow: hidden;
   height: 100px;
